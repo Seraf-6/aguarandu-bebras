@@ -4,7 +4,7 @@ Material de entrenamiento para la **Olimpiada de Informática Aguarandú–Bebra
 fase inicial. Incluye un simulacro web y cuadernillos imprimibles para las categorías
 **Kilobyte** (4.º–6.º grado), **Megabyte** (7.º–9.º) y **Gigabyte** (7.º–9.º, con programación).
 
-👉 **[Abrir el simulacro](https://USUARIO.github.io/REPOSITORIO/)** ← reemplazá este enlace por el tuyo
+👉 **[Abrir el simulacro](https://seraf-6.github.io/aguarandu-bebras/)**
 
 ---
 
@@ -34,18 +34,15 @@ propia computadora. Cambiando el código sale otra prueba distinta del mismo ban
 
 ---
 
-## Cómo publicarlo en GitHub Pages
+## Cómo actualizar el sitio publicado
 
-1. Creá un repositorio nuevo en GitHub (público).
-2. Subí **el contenido de la carpeta `site/`** a la raíz del repositorio
-   (`index.html`, `assets/`, `fichas/`, `problems.json`, `.nojekyll`).
-3. En el repositorio: **Settings → Pages**.
-4. En *Source* elegí **Deploy from a branch**, rama `main`, carpeta `/ (root)`. Guardá.
-5. Esperá 1–2 minutos: la URL queda en `https://USUARIO.github.io/REPOSITORIO/`.
-6. Actualizá el enlace del principio de este README.
+El sitio ya está publicado en **https://seraf-6.github.io/aguarandu-bebras/**
+(Settings → Pages, rama `main`, carpeta `/ (root)`).
 
-> El archivo `.nojekyll` es necesario para que GitHub Pages sirva las carpetas tal cual,
-> sin procesarlas con Jekyll.
+Para actualizarlo, subí los archivos nuevos al repositorio: GitHub Pages vuelve a publicar
+solo en 1–2 minutos. Los archivos que se sirven son `index.html`, `assets/`, `fichas/`,
+`problems.json` y `.nojekyll` (este último es necesario para que Pages sirva las carpetas
+tal cual, sin procesarlas con Jekyll).
 
 ---
 
