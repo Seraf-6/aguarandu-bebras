@@ -1,0 +1,1714 @@
+{
+ "meta": {
+  "olimpiada": "Aguarandú–Bebras (OMAPA, Paraguay)",
+  "anio": 2026,
+  "generado": "2026-08-20"
+ },
+ "problemas": [
+  {
+   "id": "omapa-kb-01",
+   "nivel": "kilobyte",
+   "titulo": "La visita a los amigos",
+   "enunciado": "<p>Olivia quiere visitar a sus amigos que viven en los pueblos A, B, C, D y E usando el transporte público ida y vuelta. Ella visita a cada amigo solo una vez, sin desviarse, y regresa de nuevo a su casa. En cada línea ella tiene que pagar 1, 2 o 3 monedas.</p><p>Un viaje posible que cuesta 11 monedas es:<br><strong>Casa → B → E → A → D → C → Casa</strong></p>",
+   "imagenes": [
+    "kb01_mapa.png"
+   ],
+   "pregunta": "¿Cuál es la mínima cantidad de monedas que le puede salir visitar a todos sus amigos?",
+   "opciones": [
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   "respuesta": 1,
+   "explicacion": "Los costos de las líneas son: Casa–B 3, Casa–C 3, Casa–D 2, Casa–A 3, D–C 1, D–A 1, C–B 1, C–E 1, B–E 1, A–C 1, A–E 2. El recorrido más barato es <strong>Casa → D → A → C → E → B → Casa</strong> = 2+1+1+1+1+3 = <strong>9</strong>. No se puede bajar de 9: las dos líneas que salen de la Casa cuestan como mínimo 2+3 = 5, y las otras 4 líneas del circuito cuestan como mínimo 1 cada una.",
+   "concepto": "Grafos / circuito de costo mínimo",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 1",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-02",
+   "nivel": "kilobyte",
+   "titulo": "Elevador",
+   "enunciado": "<p>Un grupo de castores recorren lugares turísticos de una ciudad vecina y quieren tomar el elevador para llegar a la torre de observación. Pero como se hizo tarde el elevador solo hará <strong>dos subidas más</strong>. El elevador tiene una capacidad de carga de <strong>30 kg</strong>.</p><p>Los pesos (castor + equipaje) son: <strong>8, 12, 2, 12, 22, 5, 9, 9 y 3 kg</strong>.</p>",
+   "imagenes": [
+    "kb02_elevador.png"
+   ],
+   "pregunta": "Se distribuyen a los castores con sus equipajes en dos grupos de modo a que la mayor cantidad posible de ellos pueda subir. ¿Qué cantidad de castores se puede distribuir en las dos subidas?",
+   "opciones": [
+    "2 y 7",
+    "3 y 5",
+    "4 y 3",
+    "5 y 2"
+   ],
+   "respuesta": 3,
+   "explicacion": "Conviene subir siempre a los más livianos. Ordenados: 2, 3, 5, 8, 9, 9, 12, 12, 22. Primera subida: 2+3+5+8+9 = 27 kg → <strong>5 castores</strong> (con 6 ya serían 36 kg, se pasa). Quedan 9, 12, 12 y 22: en la segunda subida entran 9+12 = 21 kg → <strong>2 castores</strong> (tres de ellos suman al menos 33 kg). En total suben 7 castores, repartidos 5 y 2.",
+   "concepto": "Algoritmos voraces / optimización con restricción",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 2",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-03",
+   "nivel": "kilobyte",
+   "titulo": "A Clara le gustan las flores",
+   "enunciado": "<p>A Clara le gustan los ramos de flores y por ello va a una florería. Allí encuentra diferentes clases de flores:</p>[[IMG0]]<p>Cada flor está disponible en los colores <strong>blanco, azul y amarillo</strong>. Clara quiere un ramo con seis flores que tengan las siguientes características:</p><ol><li>cada uno de los colores (amarillo, blanco y azul) puede repetirse exactamente dos veces,</li><li>las flores de la misma clase no pueden tener el mismo color,</li><li>cada clase de flor puede repetirse hasta un máximo de dos veces.</li></ol>",
+   "imagenes": [
+    "kb03_tipos.png",
+    "kb03_opciones.png"
+   ],
+   "pregunta": "¿Qué ramo de flores cumple con todas las características?",
+   "opciones": [
+    "Ramo A",
+    "Ramo B",
+    "Ramo C",
+    "Ramo D"
+   ],
+   "respuesta": 3,
+   "explicacion": "El ramo <strong>A</strong> tiene tres flores blancas → rompe la regla 1. El ramo <strong>B</strong> tiene tres rosas → rompe la regla 3. El ramo <strong>C</strong> tiene dos flores de la misma clase con el mismo color (amarillo) → rompe la regla 2. El ramo <strong>D</strong> tiene 2 blancas, 2 azules y 2 amarillas; los gladiolos son de colores distintos y los tulipanes también; y ninguna clase se repite más de dos veces. Cumple todo.",
+   "concepto": "Lógica / satisfacción de restricciones",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 3",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-04",
+   "nivel": "kilobyte",
+   "titulo": "El triciclo del castor Ben",
+   "enunciado": "<p>Al castor Ben le gusta andar en su triciclo. La rueda del frente tiene un bello patrón de formas (no se sabe el orden del patrón, solo que hay <strong>una sola de cada forma</strong> en el patrón):</p>[[IMG0]]<p>Ben anda en su triciclo por un charco de barro. La parte que se moja de la rueda del frente dejó marcas en el camino mientras que la parte seca no (las ruedas traseras no pasaron por el charco).</p>[[IMG1]]",
+   "imagenes": [
+    "kb04_patron.png",
+    "kb04_barro.png",
+    "kb04_opciones.png"
+   ],
+   "pregunta": "¿Qué formas aparecerán después?",
+   "opciones": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "respuesta": 3,
+   "explicacion": "La rueda es un ciclo: el patrón se repite siempre igual. Las marcas ya impresas muestran la secuencia <em>círculo lleno → triángulo lleno → estrella hueca → cuadrado lleno → cuadrado hueco</em>. Como después del círculo lleno aparecen cuatro incógnitas, se repite exactamente lo mismo que siguió la primera vez: <strong>triángulo lleno, estrella hueca, cuadrado lleno, cuadrado hueco</strong>, que es la opción D.",
+   "concepto": "Patrones y secuencias cíclicas",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 4",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-05",
+   "nivel": "kilobyte",
+   "titulo": "Observación de castores",
+   "enunciado": "<p>Floria y Rosa están observando castores desde diferentes lugares. Para comparar sus resultados, ambas se hacen preguntas que responden con las palabras SIEMPRE, A MENUDO, RARA VEZ o NUNCA. Como estas respuestas son siempre las mismas y para ahorrar esfuerzo, acuerdan el siguiente código:</p><pre>SIEMPRE:    11111\nA MENUDO:   11100\nRARA VEZ:   00011\nNUNCA:      00000</pre><p>Si reciben un código de respuesta diferente a los ya acordados, por ejemplo <code>10000</code>, ellas revisan si el código es similar a alguno de los ya acordados. Para <code>10000</code> es posible cambiar la primera posición y el resultado es <code>00000</code>, que significa NUNCA. En el caso de que no puedan encontrar un código apropiado haciendo un solo cambio, deben volver a preguntar.</p><p>Floria le pregunta a Rosa: «¿En invierno también echan árboles los castores?». Flora recibe la siguiente respuesta de Rosa: <code>00111</code>.</p>",
+   "imagenes": [
+    "kb05_castores.png"
+   ],
+   "pregunta": "¿Cuál es la respuesta más probable que dio Rosa?",
+   "opciones": [
+    "Los castores SIEMPRE echan árboles en invierno.",
+    "Los castores A MENUDO echan árboles en invierno.",
+    "Los castores RARA VEZ echan árboles en invierno.",
+    "Los castores NUNCA echan árboles en invierno."
+   ],
+   "respuesta": 2,
+   "explicacion": "Hay que contar en cuántas posiciones difiere <code>00111</code> de cada código acordado: con <code>11111</code> difiere en 2 posiciones, con <code>11100</code> en 4, con <code>00011</code> en <strong>1 sola</strong> y con <code>00000</code> en 3. El único código al que se llega cambiando un solo dígito es <code>00011</code> = <strong>RARA VEZ</strong>. Así funcionan los códigos correctores de errores.",
+   "concepto": "Detección y corrección de errores / distancia de Hamming",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 5",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-06",
+   "nivel": "kilobyte",
+   "titulo": "Estante de libros",
+   "enunciado": "<p>Ana tiene un nuevo estante para sus libros. Ella usa una caja vacía para colocar los libros hasta que el estante esté listo. Coloca los libros en la caja uno a la vez, poniendo uno encima del otro (el último libro que se introduce dentro de la caja es el que se podrá ver desde arriba).</p><p>Ana toma el primer libro ubicado en la parte de arriba de la caja, y lo coloca en el estante (de manera vertical) hasta que la caja está vacía.</p>",
+   "imagenes": [
+    "kb06_cajas.png"
+   ],
+   "pregunta": "Si Ana coloca los libros G, N, I, O, D, C en ese orden en la caja, ¿cuál es el orden de los libros en el estante?",
+   "opciones": [
+    "G, N, I, O, D, C",
+    "C, O, D, I, N, G",
+    "C, D, O, I, N, G",
+    "C, O, D, I, G, N"
+   ],
+   "respuesta": 2,
+   "explicacion": "La caja funciona como una <strong>pila</strong>: el último que entra es el primero que sale. Al meterlos en el orden G, N, I, O, D, C queda C arriba de todo. Al sacarlos salen en orden inverso: <strong>C, D, O, I, N, G</strong>, y en ese mismo orden quedan en el estante.",
+   "concepto": "Estructuras de datos / pila (LIFO)",
+   "dificultad": "facil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 6",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-07",
+   "nivel": "kilobyte",
+   "titulo": "Cadena de palabras correctas",
+   "enunciado": "<p>A los castores les gusta jugar un juego llamado <em>cadena de palabras</em>. El desafío es hacer una secuencia de palabras siguiendo una simple regla: <strong>la siguiente palabra empieza con la última letra de la palabra anterior</strong>. Lastimosamente, estos castores no conocen muchas palabras. De hecho, ellos pueden dibujar su vocabulario entero así:</p>",
+   "imagenes": [
+    "kb07_grafo.png"
+   ],
+   "pregunta": "Hay una palabra perdida en la imagen. ¿Cuál es?",
+   "opciones": [
+    "goal",
+    "gong",
+    "lowbrow",
+    "log"
+   ],
+   "respuesta": 2,
+   "explicacion": "En el dibujo, cada flecha va de una palabra a otra que empieza con su última letra. La casilla vacía tiene flechas que <em>salen</em> hacia palabras que empiezan con <strong>w</strong>, así que la palabra perdida tiene que <strong>terminar en w</strong>; y recibe flechas de palabras que terminan en <strong>l</strong> (como <em>wool</em> y <em>racquetball</em>), así que tiene que <strong>empezar con l</strong>. La única opción que empieza con l y termina en w es <strong>lowbrow</strong>.",
+   "concepto": "Grafos dirigidos",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 7",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-08",
+   "nivel": "kilobyte",
+   "titulo": "Planeta B",
+   "enunciado": "<p>Las personas del planeta B desarrollan sus ciudades de una manera específica. Inician con una casa simple y reemplazan objetos por otros objetos de acuerdo a estas tres reglas:</p>[[IMG0]]<p>En el siguiente ejemplo, la regla 1, la regla 2 y la regla 3 dos veces fueron aplicadas:</p>[[IMG1]]",
+   "imagenes": [
+    "kb08_reglas.png",
+    "kb08_ejemplo.png",
+    "kb08_opciones.png"
+   ],
+   "pregunta": "¿Cuál de las siguientes ciudades NO está en el planeta B?",
+   "opciones": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "respuesta": 1,
+   "explicacion": "La clave está en la regla 2: cuando una casa se transforma, siempre produce <strong>un árbol seguido inmediatamente de un edificio de ventanas</strong>. Es decir, <em>todo árbol tiene que tener un edificio justo a su derecha</em>. En la ciudad <strong>B</strong> el árbol de la derecha no tiene ningún edificio después: esa ciudad no se puede construir con las reglas. Las otras tres sí: A y D respetan el par árbol+edificio, y C se obtiene aplicando solo la regla 1 varias veces.",
+   "concepto": "Sistemas de reescritura / gramáticas",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 8",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-09",
+   "nivel": "kilobyte",
+   "titulo": "Compartiendo habitaciones",
+   "enunciado": "<p>Las miembros del Club de Computación de Niñas están planeando un viaje el fin de semana. Ellas se hospedarán en habitaciones grandes, las cuales pueden hospedar hasta 6 huéspedes cada una. El presidente del club le ha consultado a cada una a través de una tarjeta con quién desearían compartir la habitación (señalado con <strong>+</strong>) y con quién definitivamente no quieren compartirla (señalado con <strong>−</strong>).</p>",
+   "imagenes": [
+    "kb09_tarjetas.png"
+   ],
+   "pregunta": "Hay tres habitaciones disponibles. ¿Cuál de las siguientes opciones contiene una distribución para una habitación que respete el deseo de las niñas?",
+   "opciones": [
+    "Alina – Lilli – Lara – Emma",
+    "Mía – Emma – Zoe – Alina",
+    "Lara – Alina – Mía",
+    "Zoe – Mía – Emma"
+   ],
+   "respuesta": 3,
+   "explicacion": "Las tarjetas dicen: Alina +Lilli; Emma −Alina; Lara −Emma; Lilli −Lara; Mía +Emma +Zoe; Zoe +Mía −Alina.<br>• <strong>A</strong>: Lilli no quiere estar con Lara, y ambas están. ✗<br>• <strong>B</strong>: Emma no quiere estar con Alina, y ambas están. ✗<br>• <strong>C</strong>: Alina quiere estar con Lilli, pero Lilli no está; y Mía quiere a Emma y Zoe, que tampoco están. ✗<br>• <strong>D</strong>: Zoe quiere a Mía (está) y no quiere a Alina (no está); Mía quiere a Emma y Zoe (están las dos); Emma no quiere a Alina (no está). ✓",
+   "concepto": "Lógica / restricciones y asignación",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 9",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-kb-10",
+   "nivel": "kilobyte",
+   "titulo": "En la ciudad",
+   "enunciado": "<p>El castor Iván compró un nuevo auto amarillo. El auto se mueve ejecutando una serie de comandos. Por ejemplo, los siguientes comandos:</p>[[IMG0]]<p>lo llevan desde su casa (ubicada en la esquina izquierda de abajo) hasta la peluquería.</p>[[IMG1]]<p><strong>El auto no puede cruzar las líneas sólidas.</strong></p>",
+   "imagenes": [
+    "kb10_comandos.png",
+    "kb10_mapa.png",
+    "kb10_opciones.png"
+   ],
+   "pregunta": "¿Qué opción contiene una lista de comandos que llevarán al castor Iván de su casa a la estación de combustible?",
+   "opciones": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "respuesta": 0,
+   "explicacion": "La flecha recta significa <em>avanzar una casilla</em> y la flecha curva significa <em>girar en el lugar</em> (a la izquierda o a la derecha, según hacia dónde apunte la punta). El auto arranca mirando hacia la derecha.<br>La opción <strong>A</strong> lo lleva por la columna 2 hacia arriba (todas las líneas de ese tramo son punteadas), cruza a la columna 3 por la fila de arriba, baja, pasa a la columna 4 y baja hasta la estación de combustible, sin cruzar nunca una línea sólida.<br>Las opciones B, C y D chocan contra una pared: B contra la línea sólida entre la columna 2 y la 3 (que parece punteada pero no lo es), C contra la pared horizontal de la columna 4 y D contra el borde de abajo.",
+   "concepto": "Algoritmos / secuencias de instrucciones y navegación",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 10",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-01",
+   "nivel": "megabyte",
+   "titulo": "Competencia de saltos",
+   "enunciado": "<p>Algunos castores participan en la competencia anual de salto de castores. El primer desafío consiste en saltar de una roca a otra en dirección a las manecillas del reloj, como se muestra la flecha, empezando de la <strong>roca 0</strong>. Entonces, si un castor saltó 8 veces, el termina en la roca número 3:</p><pre>0 → 1 → 2 → 3 → 4 → 0 → 1 → 2 → 3</pre>",
+   "imagenes": [
+    "mb01_estanque.png"
+   ],
+   "pregunta": "Uno de los castores hizo despliegue de un talento impresionante y saltó 129 veces. ¿En qué roca finalizó?",
+   "opciones": [
+    "0",
+    "1",
+    "3",
+    "4"
+   ],
+   "respuesta": 3,
+   "explicacion": "Hay 5 rocas, así que cada 5 saltos el castor vuelve al mismo lugar. Basta con calcular el resto de dividir 129 entre 5: 129 = 25 × 5 + <strong>4</strong>. Termina en la roca <strong>4</strong>. (Se comprueba con el ejemplo: 8 = 1 × 5 + 3 → roca 3. ✓)",
+   "concepto": "Aritmética modular / ciclos",
+   "dificultad": "facil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 1",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-02",
+   "nivel": "megabyte",
+   "titulo": "Código castor secreto",
+   "enunciado": "<p>Para protegerse de los depredadores, los castores han inventado un método de comunicación. Para usar el código secreto usan teclados especiales; por ejemplo, el teclado <strong>CASTOR</strong> usa en vez de las primeras 5 letras del alfabeto normal las letras de la palabra CASTOR. Las siguientes letras aparecen en el teclado en orden alfabético, con excepción de las ya utilizadas, dado que cada letra aparece solo una vez.</p>[[IMG0]]<p>Entonces la palabra <strong>EXAMEN</strong>, en el teclado CASTOR, se escribe como <strong>OXCIOJ</strong>.</p>",
+   "imagenes": [
+    "mb02_teclado.png"
+   ],
+   "pregunta": "Si se utilizara el teclado ZAPLY, ¿cómo se codificaría la palabra LINCE?",
+   "opciones": [
+    "HDIPY",
+    "HMJPY",
+    "HFKPY",
+    "HEJPY"
+   ],
+   "respuesta": 3,
+   "explicacion": "El teclado ZAPLY empieza con Z, A, P, L, Y y sigue con el resto del alfabeto en orden, salteando esas cinco letras:<pre>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z\nZ A P L Y B C D E F G H I J K M N O Q R S T U V W X</pre>Ahora se traduce letra por letra: L→H, I→E, N→J, C→P, E→Y. Resultado: <strong>HEJPY</strong>.",
+   "concepto": "Criptografía / sustitución monoalfabética",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 2",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-03",
+   "nivel": "megabyte",
+   "titulo": "Nombre de la flecha",
+   "enunciado": "<p>La imagen de abajo contiene un gráfico que tiene 3 puntos A, B, C, los cuales pueden representar a personas (o castores) y flechas que muestran la relación entre ellas.</p><p>Existe una regla de que <strong>todas las flechas en el gráfico deben llevar el mismo nombre</strong>. Este nombre puede ser por ejemplo <em>hermano</em>, porque si A es hermano de B y B es hermano de C, es verdadero que A es hermano de C. Pero el nombre de la flecha no puede ser <em>padre</em>, porque si A es padre de B y B es el padre de C, no es verdadero que A es padre de C (de hecho A es abuelo de C).</p>",
+   "imagenes": [
+    "mb03_grafo.png"
+   ],
+   "pregunta": "¿Cuál de las siguientes palabras NO puede ser el nombre de la flecha?",
+   "opciones": [
+    "Más alto que",
+    "Amigo",
+    "Descendiente",
+    "Jefe"
+   ],
+   "respuesta": 3,
+   "explicacion": "El gráfico exige que la relación sea <strong>transitiva</strong>: si vale de A a B y de B a C, tiene que valer también de A a C. «Más alto que» y «descendiente» son transitivas siempre. «Amigo» no es transitiva en general, pero <em>nada impide</em> que A, B y C sean amigos entre sí, así que el dibujo podría ser cierto. En cambio <strong>«jefe»</strong> funciona igual que <em>padre</em>: si A es el jefe de B y B es el jefe de C, entonces A <em>no</em> es el jefe directo de C, sino el jefe de su jefe. Por eso «jefe» nunca puede ser el nombre de la flecha.",
+   "concepto": "Relaciones y transitividad / grafos",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 3",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-04",
+   "nivel": "megabyte",
+   "titulo": "Juego incidentado",
+   "enunciado": "<p>Cierto día, Majo, David, Iván y Marcos estaban jugando fútbol cerca de la casa de su profe Ana. Desafortunadamente, uno de ellos rompió una de las ventanas de su casa. La profe Ana quiso saber quién había roto su ventana y como los conoce bien, sabe que <strong>tres de ellos siempre dicen la verdad, pero uno de ellos no tanto</strong>.</p><p>Los chicos dijeron:</p><ul><li><strong>Marcos:</strong> «Yo no he roto la ventana.»</li><li><strong>Iván:</strong> «Marcos o David rompieron la ventana.»</li><li><strong>Majo:</strong> «David rompió la ventana.»</li><li><strong>David:</strong> «¡No, Majo, vos mentís!»</li></ul>",
+   "imagenes": [],
+   "pregunta": "¿Quién rompió la ventana?",
+   "opciones": [
+    "Majo",
+    "David",
+    "Iván",
+    "Marcos"
+   ],
+   "respuesta": 1,
+   "explicacion": "Lo que dice David es exactamente lo contrario de lo que dice Majo, así que uno de los dos miente y el otro dice la verdad. Como hay <em>un solo</em> mentiroso, Marcos e Iván dicen la verdad. Por Marcos: no fue Marcos. Por Iván: fue Marcos o David → fue <strong>David</strong>. Se verifica: Majo («David rompió») dice la verdad y David («Majo miente») es el único que miente. ✓",
+   "concepto": "Lógica proposicional / verdaderos y mentirosos",
+   "dificultad": "media",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 4",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-05",
+   "nivel": "megabyte",
+   "titulo": "Encontrando la pérdida",
+   "enunciado": "<p>La conexión de tubería de agua de <strong>16 casas</strong> que se encuentran en la misma calle tiene una pérdida. Los técnicos de mantenimiento están tratando de averiguar dónde está la pérdida. Para ayudar a descubrir esto, todos los propietarios de la calle tienen que cerrar sus llaves de agua. Para poder rastrear la ubicación de la pérdida, los técnicos cerrarán una válvula entre dos casas de modo a ver si el medidor de la tubería aún muestra que el agua está siendo usada.</p><p>Si empiezan, por ejemplo, cerrando la válvula entre el N.° 8 y el N.° 9, y el medidor muestra que el agua aún está siendo utilizada, ellos sabrán que la pérdida se encuentra entre el N.° 1 y el N.° 8 (y que no hay pérdida entre el N.° 9 y el N.° 16).</p>",
+   "imagenes": [
+    "mb05_casas.png"
+   ],
+   "pregunta": "¿Cuál es el mínimo número de válvulas que tienen que cerrar para estar seguros de identificar el lugar de la pérdida?",
+   "opciones": [
+    "2",
+    "4",
+    "6",
+    "8"
+   ],
+   "respuesta": 1,
+   "explicacion": "Cada válvula que se cierra parte el tramo sospechoso <strong>a la mitad</strong>: es una búsqueda binaria. Con 1 válvula quedan 8 posibilidades, con 2 quedan 4, con 3 quedan 2 y con <strong>4</strong> queda una sola. En general hacen falta log₂(16) = <strong>4</strong> válvulas.",
+   "concepto": "Búsqueda binaria",
+   "dificultad": "facil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 5",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-06",
+   "nivel": "megabyte",
+   "titulo": "Mapa de tesoros",
+   "enunciado": "<p>El pirata castor tiene un mapa del tesoro muy extenso el cual se ha cortado en piezas más pequeñas. Cada pieza del mapa muestra una región de 8 unidades de ancho y 8 unidades de largo (Fig. 1). Sin embargo el pirata castor tiene un bote muy pequeño y no puede tomar todas las piezas del mapa con él. Como es muy inteligente, encuentra una manera de documentar cada región (pieza del mapa) en un gráfico en su libreta de apuntes. He aquí cómo:</p><ol><li>Si todas las unidades de la región son del mismo color, marca un «cuadrado» en su libreta de apuntes con el mismo color.</li><li>A su vez, marca un «círculo» (como muestra el esquema 1) y divide la región en 4 subregiones (como muestra la Fig. 2) de acuerdo al punto central.</li><li>Repite los pasos 1 y 2 hasta que todas las unidades están registradas (como muestra el esquema 4).</li></ol>[[IMG0]]<p>El siguiente esquema está en la libreta de apuntes del pirata castor:</p>[[IMG1]]",
+   "imagenes": [
+    "mb06_esquema.png",
+    "mb06_arbol.png",
+    "mb06_opciones.png"
+   ],
+   "pregunta": "¿A cuál de las piezas de mapa representa?",
+   "opciones": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "respuesta": 1,
+   "explicacion": "El esquema es un <strong>quadtree</strong>: cada círculo se divide en 4 subregiones (1 = arriba-derecha, 2 = arriba-izquierda, 3 = abajo-izquierda, 4 = abajo-derecha) y cada cuadrado indica una región entera de un solo color.<br>Reconstruyendo el árbol nivel por nivel se obtiene esta grilla de 8×8:<pre>........\n.##..##.\n########\n########\n.######.\n..####..\n...##...\n........</pre>que es un <strong>corazón</strong>: la opción <strong>B</strong>. Verificación cruzada: al calcular el quadtree de la figura B desde cero se obtiene exactamente el mismo árbol, nodo por nodo, en los cuatro niveles (8×8, 4×4, 2×2 y 1×1).",
+   "concepto": "Estructuras de datos / quadtree y compresión de imágenes",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 6",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-07",
+   "nivel": "megabyte",
+   "titulo": "Muñeca nido de castor",
+   "incompleto": true,
+   "enunciado": "<p>Una muñeca nido de castor es un conjunto de muñecas de madera que encajan una en otra. Cada muñeca puede ser abierta desde la mitad para que pueda extraer otra muñeca de menor anchura y otra más pequeña aún dentro de ella.</p><p>Emilia tiene muchas muñecas nido de castor que son de diseños similares. Quiere ordenar sus muñecas.</p>",
+   "imagenes": [
+    "mb07_munecas.png"
+   ],
+   "pregunta": "La siguiente imagen muestra todas las muñecas que Emilia tiene. ¿Cuál es la menor cantidad de nidos de muñecas que podría armar Emilia, luego de ordenarlas una dentro de otra?",
+   "opciones": [
+    "1 nido",
+    "2 nidos",
+    "3 nidos",
+    "4 nidos"
+   ],
+   "respuesta": null,
+   "explicacion": "⚠️ <strong>Este problema está incompleto en la ficha original de OMAPA</strong>: el enunciado dice «la siguiente imagen muestra todas las muñecas que Emilia tiene», pero esa imagen no aparece en el PDF. Sin el listado de muñecas de Emilia el problema no tiene solución determinable. Se incluye acá solo para que lo tengas identificado; queda fuera del simulacro.<br><br>La idea que se quiere evaluar: una muñeca entra dentro de otra solo si es <em>estrictamente más chica en alto y en ancho</em> a la vez. La cantidad mínima de nidos es la longitud de la <em>subsecuencia decreciente más larga</em> según una dimensión, ordenando por la otra.",
+   "concepto": "Ordenamiento con dos criterios / subsecuencias",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 7 (incompleto)"
+  },
+  {
+   "id": "omapa-mb-08",
+   "nivel": "megabyte",
+   "titulo": "Construcción de represa",
+   "enunciado": "<p>La ingeniera castora quiere construir una represa para proteger su casa de las inundaciones de invierno. Para ello dispone de un número de troncos como se muestra en la <strong>Figura 1</strong>, con las cuales ella produce la represa que se muestra en la <strong>Figura 2</strong>. Además, le toma <strong>1 hora</strong> mover una pila de troncos en sentido vertical de la figura, y <strong>2 horas</strong> en sentido horizontal.</p>",
+   "imagenes": [
+    "mb08_represa.png"
+   ],
+   "pregunta": "¿Cuál es la mínima cantidad de horas que le tomará a la ingeniera castora construir la represa?",
+   "opciones": [
+    "16 horas",
+    "11 horas",
+    "14 horas",
+    "12 horas"
+   ],
+   "respuesta": 3,
+   "explicacion": "Numerando columnas 1–6 (izq→der) y filas 1–6 (arriba→abajo), las pilas están en (c1,f1), (c5,f2), (c4,f3), (c6,f4), (c3,f5) y (c2,f6), y tienen que quedar sobre la diagonal: (c1,f1), (c2,f2), (c3,f3), (c4,f4), (c5,f5) y (c6,f6).<br>Como mover en vertical cuesta la mitad, conviene <em>no</em> dejar cada pila en su fila. La mejor asignación es:<pre>(c1,f1) → (c1,f1)   0 h\n(c2,f6) → (c2,f2)   4 filas = 4 h\n(c3,f5) → (c3,f3)   2 filas = 2 h\n(c4,f3) → (c4,f4)   1 fila  = 1 h\n(c5,f2) → (c5,f5)   3 filas = 3 h\n(c6,f4) → (c6,f6)   2 filas = 2 h</pre>Total: <strong>12 horas</strong>, y todos los movimientos son verticales. No se puede bajar de 12 porque cada pila necesita al menos ese costo mínimo.",
+   "concepto": "Optimización / asignación de costo mínimo",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 8",
+   "incompleto": false
+  },
+  {
+   "id": "omapa-mb-09",
+   "nivel": "megabyte",
+   "titulo": "Menú para la cena",
+   "enunciado": "<p>Cinthia, Denis, Eric, Fran y Gloria se encuentran en un restaurante. Sabemos algunos hechos acerca de lo que ordenaron para cenar:</p><ul><li>Cada plato del menú ha sido ordenado al menos una vez;</li><li>Cada persona ha ordenado una sopa, un plato principal y una bebida;</li><li>Eric, quien ha ordenado la misma sopa que Fran, ha elegido pasta como plato principal;</li><li>Dos personas, que ordenaron sopa de vegetales, seleccionaron pollo y asado respectivamente como plato principal;</li><li>Gloria ordenó jugo de naranja y ensalada;</li><li>Coca cola ha sido ordenada sólo por Cinthia y Denis;</li><li>La persona que ordenó sopa de tomate también seleccionó pizza y jugo de naranja;</li><li>Cinthia ordenó pollo como plato principal.</li></ul>",
+   "imagenes": [
+    "mb09_menu.png"
+   ],
+   "pregunta": "De acuerdo a la información que se tiene, ¿qué ordenó Denis?",
+   "opciones": [
+    "Sopa de vegetales · Pollo · Coca cola",
+    "Sopa de vegetales · Asado · Coca cola",
+    "Sopa de tomate · Pasta · Agua mineral",
+    "Sopa de tomate · Pizza · Coca cola"
+   ],
+   "respuesta": 1,
+   "explicacion": "Como hay 5 platos principales y 5 personas, y cada plato se pidió al menos una vez, <strong>cada persona pidió un plato principal distinto</strong>. Eric = pasta, Gloria = ensalada, Cinthia = pollo → a Denis y Fran les quedan pizza y asado.<br>• Denis no pudo pedir pollo (lo pidió Cinthia) → descarta A.<br>• Quien pidió sopa de tomate también pidió pizza <em>y jugo de naranja</em>, no coca cola → descarta D.<br>• Eric pidió la pasta, así que Denis no → descarta C.<br>Queda <strong>B</strong>: Denis pidió sopa de vegetales, asado y coca cola. Coincide con el cuarto dato (los dos de sopa de vegetales pidieron pollo y asado: Cinthia y Denis) y con el sexto (la coca cola solo la pidieron Cinthia y Denis).",
+   "concepto": "Lógica / razonamiento deductivo con restricciones",
+   "dificultad": "dificil",
+   "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 9",
+   "incompleto": false
+  },
+  {
+   "id": "ki-devolviendo-los-libros",
+   "nivel": "kilobyte",
+   "titulo": "Devolviendo los libros",
+   "enunciado": "<p>En la biblioteca de los castores hay una sola ventanilla para devolver libros. Cinco castores llegan a distintas horas, pero la ventanilla recién abre a las 9:15, cuando ya llegaron todos.</p><p>La bibliotecaria atiende siguiendo esta regla: pasa primero el castor que trae MENOS libros. Si dos castores traen la misma cantidad de libros, pasa primero el que llegó antes.</p><pre>Castor | Hora de llegada | Cantidad de libros\nAna    |      9:00       |         4\nBert   |      9:02       |         6\nConny  |      9:03       |         2\nDavid  |      9:05       |         4\nEmil   |      9:11       |         1</pre>",
+   "imagenes": [],
+   "pregunta": "¿En qué orden devolverán sus libros los castores?",
+   "opciones": [
+    "Ana, Bert, Conny, David, Emil",
+    "Emil, Conny, Ana, David, Bert",
+    "Emil, Conny, David, Ana, Bert",
+    "Conny, Emil, Ana, David, Bert"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Se ordena de menor a mayor cantidad de libros: Emil (1), Conny (2), luego los dos que tienen 4 y por último Bert (6). Ana y David empatan con 4 libros, así que desempata la hora de llegada: Ana llegó 9:00 y David 9:05, entonces va primero Ana. Las computadoras usan esta misma idea (llamada «el trabajo más corto primero») para decidir qué tarea atender antes.</p>",
+   "concepto": "Algoritmos / planificación de tareas",
+   "dificultad": "facil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Devolviendo los libros», Desafío Bebras PR 2024)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-fiesta-con-pizza",
+   "nivel": "kilobyte",
+   "titulo": "Fiesta con pizza",
+   "enunciado": "<p>Juan va a hacer una fiesta con pizza y quiere poner exactamente 3 ingredientes. Un amigo queda contento SOLO si TODOS los ingredientes que a él le gustan están en la pizza.</p><pre>Amigo | Ingredientes que quiere\nAna   | champiñón, queso\nBeto  | champiñón, queso, cebolla\nCarla | champiñón, piña\nDani  | queso, cebolla\nElsa  | champiñón, queso, cebolla</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué tres ingredientes debe elegir Juan para dejar contentos a la mayor cantidad de amigos?",
+   "opciones": [
+    "champiñón, queso y cebolla",
+    "champiñón, queso y piña",
+    "champiñón, cebolla y piña",
+    "queso, cebolla y piña"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Con champiñón, queso y cebolla quedan contentos Ana, Beto, Dani y Elsa: 4 amigos. Con champiñón, queso y piña solo Ana y Carla (2). Con champiñón, cebolla y piña solo Carla (1). Con queso, cebolla y piña solo Dani (1). Contar cuántas veces se repite cada preferencia ayuda a elegir la mejor combinación.</p>",
+   "concepto": "Optimización / conteo y frecuencias",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-dias-soleados",
+   "nivel": "kilobyte",
+   "titulo": "Días soleados",
+   "enunciado": "<p>En el bosque hay tres charcas: la charca del sauce, la charca de la cascada y la charca redonda.</p><p>Tom dice: «En los días soleados siempre hay al menos un castor nadando en CADA una de las tres charcas.»</p><p>Kim le responde: «Eso no es cierto. El domingo pasado estuvo soleado y lo que vos decís no se cumplió.»</p>",
+   "imagenes": [],
+   "pregunta": "¿Qué pudo haber pasado el domingo pasado para que Kim tenga razón?",
+   "opciones": [
+    "Había castores nadando en todas las charcas",
+    "Ningún castor nadó en la charca de la cascada",
+    "El castor Miguel nadó en las tres charcas",
+    "El castor Miguel no nadó ese día"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Para demostrar que una afirmación del tipo «siempre / en todas» es falsa, alcanza con encontrar UN contraejemplo. La frase de Tom falla solamente si en un día soleado hubo alguna charca sin ningún castor nadando: eso es exactamente la opción B. Las otras opciones podrían pasar sin contradecir a Tom, porque otros castores podrían estar nadando en las demás charcas.</p>",
+   "concepto": "Lógica / contraejemplos",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Días soleados», Desafío Bebras PR 2024)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-tour-de-los-arboles",
+   "nivel": "kilobyte",
+   "titulo": "El tour de los árboles",
+   "enunciado": "<p>Los guardaparques quieren armar una lista con cinco árboles (A, B, C, D y E) ordenados del MENOS visitado al MÁS visitado.</p><p>De recorridos anteriores saben estas listas parciales. Cada lista está en orden, del menos visitado al más visitado, pero puede saltear árboles:</p><pre>Recorrido 1:  A , C , D , B\nRecorrido 2:  E , C , D\nRecorrido 3:  A , E</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la única lista completa que no contradice ningún recorrido anterior?",
+   "opciones": [
+    "A, C, E, D, B",
+    "A, E, C, D, B",
+    "E, A, C, D, B",
+    "A, E, C, B, D"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>De los recorridos salen estas reglas: A antes que C, C antes que D, D antes que B, E antes que C, y A antes que E. La opción A pone C antes que E (rompe el recorrido 2). La opción C pone E antes que A (rompe el recorrido 3). La opción D pone B antes que D (rompe el recorrido 1). Solo A, E, C, D, B cumple todas. Esto se llama ordenamiento topológico y sirve para decidir en qué orden hacer tareas que dependen unas de otras.</p>",
+   "concepto": "Ordenamiento topológico / grafos",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-estacionamientos-libres",
+   "nivel": "kilobyte",
+   "titulo": "Estacionamientos libres",
+   "enunciado": "<p>Un estacionamiento tiene 10 lugares numerados. Durante el fin de semana se anotó qué lugares estaban ocupados cada día (X = ocupado, - = libre):</p><pre>Lugar:     1  2  3  4  5  6  7  8  9  10\nViernes:   X  -  X  X  -  X  -  X  X  -\nSábado:    -  X  X  -  X  -  X  -  X  X\nDomingo:   X  X  -  X  X  X  X  -  -  -</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuál lugar estuvo libre durante DOS días seguidos?",
+   "opciones": [
+    "El lugar 2",
+    "El lugar 5",
+    "El lugar 8",
+    "El lugar 10"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Hay que mirar cada columna y buscar dos guiones juntos. El lugar 2 estuvo libre solo el viernes. El lugar 5 solo el viernes. El lugar 10 estuvo libre el viernes y el domingo, pero no son días seguidos. El lugar 8 estuvo libre el sábado Y el domingo: dos días seguidos. Leer una tabla por columnas es una forma básica de analizar datos.</p>",
+   "concepto": "Representación de datos / lectura de tablas",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-las-riccas",
+   "nivel": "kilobyte",
+   "titulo": "Las riccas",
+   "enunciado": "<p>Efrén quiere aprender cómo son los animales llamados «riccas». Estudió estas cinco riccas y escribió cuatro notas:</p><pre>Ricca | Alas | Brazos | Piernas | Dientes | Cuernos | Ojos\n  1   |  sí  |   2    |    2    |   sí    |   sí    |  2\n  2   |  no  |   1    |    3    |   sí    |   no    |  3\n  3   |  sí  |   2    |    2    |   sí    |   no    |  3\n  4   |  no  |   3    |    1    |   sí    |   sí    |  2\n  5   |  sí  |   2    |    2    |   sí    |   sí    |  2</pre><p>Después le muestran una SEXTA ricca:</p><pre>Ricca 6: sin alas, 2 brazos, 2 piernas, con dientes, con cuernos, 3 ojos</pre><p>Al verla, Efrén se da cuenta de que una de sus notas es seguramente incorrecta.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál de las notas es incorrecta?",
+   "opciones": [
+    "Las riccas a veces tienen alas",
+    "Si una ricca tiene exactamente dos brazos, entonces también tiene exactamente dos piernas",
+    "Todas las riccas tienen dientes",
+    "Las riccas tienen cuernos o tres ojos, pero nunca las dos cosas a la vez"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>La ricca 6 tiene cuernos Y tres ojos al mismo tiempo, así que la nota D es falsa. Las otras notas siguen siendo válidas: la nota A dice «a veces» y las riccas 1, 3 y 5 tienen alas; la ricca 6 tiene 2 brazos y 2 piernas, así que cumple la nota B; y la ricca 6 tiene dientes, así que cumple la nota C. Es lo que hacen los programas de inteligencia artificial: revisan sus reglas cuando aparece un dato nuevo que no encaja.</p>",
+   "concepto": "Lógica / reglas y contraejemplos",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Riccas», Desafío Bebras PR 2023)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-arbol-magico",
+   "nivel": "kilobyte",
+   "titulo": "El árbol mágico",
+   "enunciado": "<p>Benito el castor tiene un árbol mágico al lado de su casa. Funciona así:</p><ul><li>Cada vez que se posa un PÁJARO, al árbol le crecen 2 manzanas.</li><li>Cada vez que sube una ARDILLA, al árbol se le cae 1 manzana (si no tiene ninguna, no pasa nada).</li><li>Cada vez que llega una SERPIENTE, ¡todas las manzanas desaparecen al instante!</li></ul><p>A la mañana el árbol tenía 25 manzanas. Benito dibujó a todos los animales que llegaron, en orden:</p><pre>pájaro, pájaro, ardilla, SERPIENTE, pájaro, ardilla, pájaro, pájaro, ardilla, ardilla</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuántas manzanas quedan en el árbol al final del día?",
+   "opciones": [
+    "0",
+    "3",
+    "5",
+    "7"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Después de la serpiente el árbol queda en 0, así que todo lo anterior no importa. Desde ahí: pájaro 0+2=2, ardilla 2−1=1, pájaro 1+2=3, pájaro 3+2=5, ardilla 5−1=4, ardilla 4−1=3. Quedan 3 manzanas. Darse cuenta de que la serpiente «reinicia» el conteo ahorra muchísimo trabajo: es como ejecutar un programa paso a paso y reconocer una instrucción que borra el estado anterior.</p>",
+   "concepto": "Algoritmos / simulación de estados",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-un-dia-en-el-zoologico",
+   "nivel": "kilobyte",
+   "titulo": "Un día en el zoológico",
+   "enunciado": "<p>Ana pasa el día en el zoológico. Cada actividad tiene hora de inicio y hora de fin, y no se puede entrar ni salir en el medio de una actividad. Ana solo puede estar en una actividad a la vez.</p><pre>Actividad     Empieza   Termina\nNutrias        10:00     10:30\nJirafas        10:00     11:00\nElefantes      10:45     11:15\nLoros          11:00     12:00\nPingüinos      11:30     12:00\nHipopótamos    12:15     13:00\nCocodrilos     12:30     13:30\nMonos          13:15     14:00</pre>",
+   "imagenes": [],
+   "pregunta": "¿A cuántas actividades como máximo puede asistir Ana?",
+   "opciones": [
+    "3 actividades",
+    "4 actividades",
+    "5 actividades",
+    "6 actividades"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>El truco es elegir siempre la actividad que TERMINA más temprano entre las que todavía se pueden empezar. Así sale: Nutrias (10:00–10:30), Elefantes (10:45–11:15), Pingüinos (11:30–12:00), Hipopótamos (12:15–13:00) y Monos (13:15–14:00): 5 actividades. Si Ana empieza con Jirafas (que termina 11:00) pierde tiempo y llega a menos actividades. Esta estrategia se llama algoritmo voraz y las computadoras la usan para armar horarios.</p>",
+   "concepto": "Algoritmos voraces / planificación",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Un día en el zoológico», Desafío Bebras PR 2023)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-cerca-o-lejos",
+   "nivel": "kilobyte",
+   "titulo": "Cerca o lejos",
+   "enunciado": "<p>Daniel busca un tesoro escondido en una cuadrícula de 4 filas por 4 columnas. Las filas se cuentan de arriba (fila 1) hacia abajo (fila 4) y las columnas de izquierda (columna 1) a derecha (columna 4).</p><p>Daniel arranca en la fila 4, columna 1, y da pasos de a un casillero, hacia arriba, abajo, izquierda o derecha. Después de cada paso una señal le avisa:</p><pre>C = ahora estás MÁS CERCA del tesoro\nL = ahora estás MÁS LEJOS del tesoro</pre><p>(La distancia es la cantidad mínima de pasos que faltan para llegar al tesoro.)</p><p>Estos fueron sus pasos y sus señales:</p><pre>1) fila 4-col 1  -&gt;  fila 4-col 2  -&gt;  C\n2) fila 4-col 2  -&gt;  fila 4-col 3  -&gt;  L\n3) fila 4-col 3  -&gt;  fila 3-col 3  -&gt;  C\n4) fila 3-col 3  -&gt;  fila 2-col 3  -&gt;  C\n5) fila 2-col 3  -&gt;  fila 1-col 3  -&gt;  L</pre>",
+   "imagenes": [],
+   "pregunta": "¿En qué casillero está el tesoro?",
+   "opciones": [
+    "Fila 1, columna 2",
+    "Fila 2, columna 2",
+    "Fila 3, columna 2",
+    "Fila 1, columna 4"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Paso 1 (C, se movió a la derecha): el tesoro está en la columna 2 o más a la derecha. Paso 2 (L, siguió a la derecha): se pasó, así que el tesoro está en la columna 2. Paso 3 (C, subió): el tesoro está en la fila 3 o más arriba. Paso 4 (C, subió otra vez): está en la fila 2 o más arriba. Paso 5 (L, subió a la fila 1): se pasó, así que la fila es la 2. El tesoro está en fila 2, columna 2. Cada señal recorta las posibilidades, igual que en una búsqueda binaria.</p>",
+   "concepto": "Búsqueda / razonamiento deductivo",
+   "dificultad": "dificil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Cerca o lejos», Desafío Bebras PR 2023)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-la-isla-del-tesoro",
+   "nivel": "kilobyte",
+   "titulo": "La isla del tesoro",
+   "enunciado": "<p>Hay 5 islas unidas por puentes. Cada puente tiene una letra escrita: A, B o C. Desde una isla puede salir un puente A, uno B y/o uno C (o puede que falte alguno).</p><pre>Isla | Puente A lleva a | Puente B lleva a | Puente C lleva a\n  1  |       2          |        3         |     no hay\n  2  |       3          |     no hay       |        4\n  3  |    no hay        |        5         |        1\n  4  |       5          |        2         |     no hay\n  5  |    no hay        |     no hay       |        3</pre><p>Pablo empieza en la ISLA 1 y lee un código de letras de izquierda a derecha. Para cada letra: si desde la isla donde está sale un puente con esa letra, lo cruza; si no existe ese puente, ignora la letra y sigue con la siguiente.</p><p>El código es:</p><pre>B  A  C  A  C</pre>",
+   "imagenes": [],
+   "pregunta": "¿En qué isla está escondido el tesoro (donde termina Pablo)?",
+   "opciones": [
+    "Isla 2",
+    "Isla 3",
+    "Isla 4",
+    "Isla 5"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Desde la isla 1 con la B va a la isla 3. En la isla 3 no hay puente A, así que ignora esa letra. Con la C va de la isla 3 a la isla 1. Con la A va de la isla 1 a la isla 2. Con la C va de la isla 2 a la isla 4. Termina en la isla 4. Un mapa con lugares y caminos es un grafo: así guardan los mapas las aplicaciones de GPS.</p>",
+   "concepto": "Grafos / recorridos",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-casillas-pintadas",
+   "nivel": "kilobyte",
+   "titulo": "Casillas pintadas",
+   "enunciado": "<p>Los castores pintan filas de casillas de colores: A = azul, R = rojo.</p><p>Para no escribir tanto, anotan la CANTIDAD de casillas seguidas y después el color. Por ejemplo:</p><pre>Código: 3A2R      significa:   A A A R R\nCódigo: 1R4A      significa:   R A A A A</pre><p>Luna escribió este código:</p><pre>3A1R2A2R</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la fila que pintó Luna?",
+   "opciones": [
+    "A A A R A A R R",
+    "A A A R R A A R",
+    "A A A R A A R A",
+    "A A A R R A A A"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Se lee el código por partes: 3A son tres azules (A A A), 1R es un rojo (R), 2A son dos azules (A A) y 2R son dos rojos (R R). Queda A A A R A A R R. Esta forma de escribir se llama compresión por longitud de series (RLE) y sirve para guardar imágenes ocupando menos espacio.</p>",
+   "concepto": "Representación de datos / compresión",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-jugo-de-naranja",
+   "nivel": "kilobyte",
+   "titulo": "Jugo de naranja",
+   "enunciado": "<p>Sobre la mesa hay 8 botellas de jugo en fila. El número indica cuánto jugo tiene cada una.</p><pre>Botella:  1   2   3   4   5   6   7   8\nJugo:     4   2   5   3   6   8   9   7</pre><p>Kamal solo puede tomar de una botella si se cumplen LAS DOS cosas al mismo tiempo:</p><ul><li>la botella que está a su IZQUIERDA tiene MENOS jugo que ella, Y</li><li>la botella que está a su DERECHA tiene MÁS jugo que ella.</li></ul><p>Las botellas de las puntas (la 1 y la 8) no sirven porque les falta un vecino.</p>",
+   "imagenes": [],
+   "pregunta": "¿De qué botellas puede tomar Kamal?",
+   "opciones": [
+    "Solo de la botella 5",
+    "De las botellas 5 y 6",
+    "De las botellas 3 y 5",
+    "De las botellas 5, 6 y 7"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Hay que buscar tres botellas seguidas cuyos números vayan creciendo, y quedarse con la del medio. Botella 5 (jugo 6): a su izquierda 3 y a su derecha 8, cumple. Botella 6 (jugo 8): izquierda 6 y derecha 9, cumple. Botella 3 (jugo 5) no sirve porque a su derecha hay 3. Botella 7 (jugo 9) no sirve porque a su derecha hay 7. Acá se usa el operador lógico Y (AND): las dos condiciones tienen que cumplirse juntas.</p>",
+   "concepto": "Lógica / operador Y (AND)",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-montanista",
+   "nivel": "kilobyte",
+   "titulo": "El montañista",
+   "enunciado": "<p>Bruno el montañista camina por una fila de montañas. Los números son las alturas:</p><pre>Montaña:  1   2   3   4   5   6   7   8\nAltura:   3   5   4   7   6   9   8   2</pre><p>Bruno siempre hace lo mismo: mira las montañas vecinas (la de su izquierda y la de su derecha). Si alguna es más alta que donde está, se muda a la MÁS ALTA de sus vecinas. Repite eso hasta que ninguna vecina sea más alta, y ahí se queda.</p>",
+   "imagenes": [],
+   "pregunta": "¿Desde cuántas montañas puede empezar Bruno para terminar en la montaña más alta de todas (la de altura 9)?",
+   "opciones": [
+    "Desde 2 montañas",
+    "Desde 3 montañas",
+    "Desde 4 montañas",
+    "Desde 5 montañas"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Si empieza en la montaña 5 (altura 6) sube a la 6 (altura 9): llega. Si empieza en la 6 ya está en la más alta. Si empieza en la 7 (altura 8) su vecina más alta es la 6 (altura 9): llega. Si empieza en la 8 (altura 2) sube a la 7 y después a la 6: llega. En cambio, desde la 1 termina atrapado en la montaña 2 (altura 5) y desde la 3 termina atrapado en la 4 (altura 7). Son 4 montañas: la 5, la 6, la 7 y la 8. Este método se llama algoritmo voraz y a veces se queda en un «máximo local» en vez del máximo verdadero.</p>",
+   "concepto": "Algoritmos voraces / máximo local",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-hojas-frutos-y-madera",
+   "nivel": "kilobyte",
+   "titulo": "Hojas, frutos y madera",
+   "enunciado": "<p>Emil encontró una hoja en el bosque y quiere saber si la madera de ese árbol es buena para construir. Él no sabe nada de árboles, pero tiene tres amigos y cada uno sabe una cosa distinta:</p><pre>Severin  : mirando la FORMA de una hoja, dice de qué ESPECIE es el árbol.\nQuirina  : sabiendo la ESPECIE, dice qué FRUTOS da ese árbol.\nLadina   : sabiendo la ESPECIE, dice si la MADERA de ese árbol es buena.</pre><p>Emil solo tiene la hoja.</p>",
+   "imagenes": [],
+   "pregunta": "¿A quiénes tiene que preguntarles, y en qué orden, para averiguar si la madera es buena?",
+   "opciones": [
+    "A Quirina, después a Severin y después a Ladina",
+    "Solo a Ladina",
+    "A Severin y después a Ladina",
+    "A Severin y después a Quirina"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Emil arranca con la hoja, así que primero necesita a Severin, que traduce la forma de la hoja en la especie del árbol. Con esa especie ya puede preguntarle a Ladina, que dice si la madera es buena. A Ladina sola no puede preguntarle porque ella necesita la especie, no la hoja. Y Quirina solo sabe de frutos, que no hace falta. Encadenar dos tablas usando un dato en común (la especie) es lo que hacen las bases de datos.</p>",
+   "concepto": "Estructuras de datos / bases de datos",
+   "dificultad": "facil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Hojas, frutos y madera», Bebras Suiza)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-la-hora-del-almuerzo",
+   "nivel": "kilobyte",
+   "titulo": "La hora del almuerzo",
+   "enunciado": "<p>Lala lleva un almuerzo por día, de lunes a viernes. Cada día puede llevar una sola cosa: mango, manzana, pera o un dulce.</p><p>Tiene que cumplir estas dos reglas:</p><ol><li>No puede llevar mango dos días seguidos.</li><li>Si un día lleva dulce, al día siguiente tiene que llevar manzana o pera.</li></ol><p>Ya decidió tres días:</p><pre>Lunes    : mango\nMartes   : ?\nMiércoles: ?\nJueves   : mango\nViernes  : dulce</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué puede llevar el martes y el miércoles sin romper ninguna regla?",
+   "opciones": [
+    "Martes mango, miércoles dulce",
+    "Martes dulce, miércoles mango",
+    "Martes dulce, miércoles pera",
+    "Martes pera, miércoles mango"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>La opción A rompe la regla 1: lunes y martes serían mango. La opción B rompe la regla 2: después de un dulce tiene que venir manzana o pera, no mango. La opción D rompe la regla 1: miércoles y jueves serían mango. La opción C funciona: lunes mango y martes dulce está bien, después del dulce viene pera (cumple la regla 2) y el jueves puede ser mango porque el miércoles no lo fue.</p>",
+   "concepto": "Lógica / reglas condicionales",
+   "dificultad": "facil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «La hora del lunch», Bebras Indonesia)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-estanque-de-los-cocodrilos",
+   "nivel": "kilobyte",
+   "titulo": "El estanque de los cocodrilos",
+   "enunciado": "<p>Los cocodrilos de una misma familia tienen la misma secuencia de escamas en el lomo, leída de la cabeza a la cola. Con los años pueden PERDER algunas escamas, pero las que quedan siempre conservan el mismo orden. Nunca les aparecen escamas nuevas ni cambian de lugar.</p><p>Esta es la secuencia de Juancho, de la cabeza a la cola (T = triángulo, C = círculo, U = cuadrado, R = rombo):</p><pre>Juancho:  T  C  U  R  T</pre><p>Estos son cuatro cocodrilos del estanque:</p><pre>A:  T  U  T\nB:  C  T  U\nC:  T  R  C\nD:  U  C  T</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuál de ellos puede ser de la familia de Juancho?",
+   "opciones": [
+    "El cocodrilo A",
+    "El cocodrilo B",
+    "El cocodrilo C",
+    "El cocodrilo D"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Hay que ver si la secuencia del cocodrilo se puede obtener tachando escamas de la de Juancho (T C U R T) sin cambiar el orden. Para A: T (la 1.ª), U (la 3.ª) y T (la 5.ª): funciona. Para B: después del círculo, en Juancho ya no hay ningún triángulo antes de un cuadrado. Para C: después del rombo solo queda un triángulo, no un círculo. Para D: después del cuadrado ya no hay círculo. Buscar una subsecuencia dentro de otra es reconocimiento de patrones, muy usado al comparar textos y datos.</p>",
+   "concepto": "Reconocimiento de patrones / subsecuencias",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Estanque de cocodrilos», Tarjetas Bebras Perú)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-vamos-de-compras",
+   "nivel": "kilobyte",
+   "titulo": "Vamos de compras",
+   "enunciado": "<p>Mateo tiene que ir a cuatro negocios y volver a su casa. Puede visitarlos en el orden que quiera, pero cada negocio una sola vez. La tabla muestra los minutos que tarda en ir de un lugar a otro:</p><pre>              Casa  Librería  Pastelería  Pizzería  Peluquería\nCasa            -       5         20         25         10\nLibrería        5       -         10         15         20\nPastelería     20      10          -         20         10\nPizzería       25      15         20          -         10\nPeluquería     10      20         10         10          -</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la MENOR cantidad de minutos que necesita Mateo para salir de su casa, visitar los cuatro negocios y volver a su casa?",
+   "opciones": [
+    "50 minutos",
+    "55 minutos",
+    "60 minutos",
+    "65 minutos"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>El mejor recorrido es Casa → Librería (5) → Pastelería (10) → Pizzería (20) → Peluquería (10) → Casa (10), que suma 55 minutos. El mismo recorrido al revés también da 55. Cualquier otro orden da 60 o más: por ejemplo Casa → Librería → Pastelería → Peluquería → Pizzería → Casa da 5+10+10+10+25 = 60. Este es el famoso «problema del viajante», que usan las apps de reparto y los GPS para elegir rutas.</p>",
+   "concepto": "Grafos / optimización de rutas",
+   "dificultad": "dificil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Vamos de compras», Tarjetas Bebras Perú)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-album-de-fotos",
+   "nivel": "kilobyte",
+   "titulo": "El álbum de fotos",
+   "enunciado": "<p>Felipe tiene fotos de todo un año y en el reverso de cada una está anotado el mes. Le pide a su nieta Luna que las guarde en 12 álbumes numerados del 1 al 12, uno por mes, en orden desde enero hasta diciembre.</p><p>Para hacerle una broma, Luna guarda las fotos en orden ALFABÉTICO de los nombres de los meses, en vez de en orden del calendario. Es decir, el álbum 1 tiene el mes que va primero en el diccionario, el álbum 2 el que sigue, y así.</p>",
+   "imagenes": [],
+   "pregunta": "¿En qué número de álbum va a encontrar Felipe las fotos de enero?",
+   "opciones": [
+    "En el álbum 1",
+    "En el álbum 3",
+    "En el álbum 4",
+    "En el álbum 5"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Ordenados alfabéticamente los meses quedan así: abril (1), agosto (2), diciembre (3), enero (4), febrero (5), julio (6), junio (7), marzo (8), mayo (9), noviembre (10), octubre (11), septiembre (12). Enero queda en el lugar 4. Ordenar datos con criterios distintos (por fecha, por nombre, por tamaño) es una de las tareas más comunes en informática.</p>",
+   "concepto": "Ordenamiento / clasificación de datos",
+   "dificultad": "facil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Álbum de fotos», Tarjetas Bebras Perú)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-descargando-el-tren",
+   "nivel": "kilobyte",
+   "titulo": "Descargando el tren",
+   "enunciado": "<p>Un tren de carga tiene 6 vagones y cada uno lleva una caja numerada. Una grúa fija baja las cajas, pero solo puede bajar la caja del vagón que en ese momento está justo debajo de ella.</p><p>El tren avanza siempre hacia adelante por una vía circular, así que los vagones pasan frente a la grúa siempre en el mismo orden, y cuando termina de pasar el último vagón empieza otra vuelta desde el primero.</p><p>Las cajas TIENEN que bajarse en orden: primero la 1, después la 2, y así hasta la 6. Si la caja que toca bajar ya pasó frente a la grúa, hay que esperar a la vuelta siguiente.</p><p>Este es el orden en que pasan los vagones:</p><pre>primero -&gt; [3] [1] [5] [2] [6] [4] -&gt; último</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuántas vueltas se necesitan para bajar todas las cajas?",
+   "opciones": [
+    "2 vueltas",
+    "3 vueltas",
+    "4 vueltas",
+    "6 vueltas"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Vuelta 1: pasa el 3 (no toca), baja la caja 1, pasa el 5 (no toca), baja la caja 2, y las cajas 3 y 4 ya no pueden bajarse porque el 6 y el 4 no son la siguiente. Vuelta 2: baja la caja 3 (primer vagón) y más adelante baja la caja 4 (último vagón). Vuelta 3: baja la caja 5 y después la caja 6. En total, 3 vueltas. Cada vez que el número que sigue quedó ATRÁS del último que bajamos, hace falta una vuelta más.</p>",
+   "concepto": "Algoritmos / ordenamiento por pasadas",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Descargando», Desafío Bebras PR 2023)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-almacen-de-troncos",
+   "nivel": "kilobyte",
+   "titulo": "El almacén de troncos",
+   "enunciado": "<p>La castora Sonia guarda troncos a lo largo de un camino angosto de 18 metros. Los troncos van uno atrás del otro (no caben lado a lado).</p><p>Sonia tiene una regla fija: cada tronco nuevo lo pone en el hueco libre MÁS A LA IZQUIERDA donde quepa.</p><p>Hoy el camino se ve así (cada carácter es 1 metro, L = tronco ya colocado, . = espacio libre):</p><pre>L L L . . L L L L . . . L . . . . .</pre><p>Es decir, de izquierda a derecha hay un hueco de 2 metros, después un hueco de 3 metros y al final un hueco de 5 metros.</p><p>Sonia va a cortar cuatro troncos: uno de 1 metro, uno de 2 metros, uno de 3 metros y uno de 4 metros (en total 10 metros, justo lo que hay libre). Los coloca de a uno, en el orden en que los corta, siempre con su regla.</p>",
+   "imagenes": [],
+   "pregunta": "¿En qué orden tiene que cortarlos para que entren todos?",
+   "opciones": [
+    "1, 2, 3, 4",
+    "4, 3, 2, 1",
+    "2, 1, 4, 3",
+    "3, 1, 2, 4"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Con el orden 4, 3, 2, 1: el de 4 m no entra en los huecos de 2 ni de 3, así que va al de 5 m y deja 1 m libre; el de 3 m entra justo en el hueco de 3 m; el de 2 m entra justo en el hueco de 2 m; y el de 1 m entra en el metro que sobró al final. Entran todos. Con 1, 2, 3, 4 el tronco de 1 m rompe el hueco de 2 m y al final el de 4 m no encuentra lugar. Este problema es igual al de la memoria de una computadora: si se van dejando huequitos sueltos (fragmentación), después no entran los datos grandes.</p>",
+   "concepto": "Estructuras de datos / asignación de memoria",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-tobogan-que-cambia",
+   "nivel": "kilobyte",
+   "titulo": "El tobogán que cambia",
+   "enunciado": "<p>En el parque hay un tobogán con tres cruces. En cada cruce hay una flecha que manda al castor para la izquierda o para la derecha.</p><pre>            entrada\n               |\n              [R]\n             /    \\\n           [L]     [S]\n           /  \\    /  \\\n          A    B  C    D</pre><p>Al empezar el día, LAS TRES flechas apuntan a la IZQUIERDA.</p><p>Cuando un castor llega a un cruce, baja hacia donde apunta la flecha y enseguida esa flecha cambia de lado (si apuntaba a la izquierda, queda apuntando a la derecha, y al revés).</p><p>Bajan tres castores, uno después del otro: primero Ana, después Beto y por último Dan.</p>",
+   "imagenes": [],
+   "pregunta": "¿Por qué salida sale Dan?",
+   "opciones": [
+    "Por la salida A",
+    "Por la salida B",
+    "Por la salida C",
+    "Por la salida D"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Ana: en R va a la izquierda (R queda a la derecha), en L va a la izquierda y sale por A (L queda a la derecha). Beto: en R va a la derecha (R vuelve a la izquierda), en S va a la izquierda y sale por C (S queda a la derecha). Dan: en R va a la izquierda otra vez, llega a L, que ahora apunta a la DERECHA, así que sale por B. Cada cruce recuerda lo que pasó antes: es una memoria de un bit, igual que los circuitos que guardan información en las computadoras.</p>",
+   "concepto": "Estados y memoria / estructuras de árbol",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Tobogán cambiante», Bebras Taiwán)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-armando-robots",
+   "nivel": "kilobyte",
+   "titulo": "Armando robots",
+   "enunciado": "<p>Seis animales arman un robot entre todos. Cada uno hace un paso, en este orden, siguiendo el plano:</p><pre>1) Oso     : coloca la base con dos ruedas.\n2) Zorro   : coloca el cuerpo sobre la base.\n3) Mono    : pega las luces en el PECHO del robot.\n4) Lechuza : coloca los dos brazos en el cuerpo.\n5) Castor  : coloca la cabeza con una antena.\n6) Conejo  : pinta todo el robot de azul.</pre><p>Cuando terminan, el robot quedó así:</p><pre>base con dos ruedas / cuerpo / luces pegadas en la BASE /\ndos brazos / cabeza con antena / pintado de azul</pre>",
+   "imagenes": [],
+   "pregunta": "¿Quién hizo mal su trabajo?",
+   "opciones": [
+    "El Oso",
+    "El Mono",
+    "La Lechuza",
+    "El Castor"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Comparando el plano con el robot terminado, todo coincide menos las luces: el plano decía que van en el pecho y quedaron en la base. Ese paso le tocaba al Mono. Comparar el resultado con lo esperado, paso por paso, para encontrar dónde estuvo el error se llama depurar (debugging) y es lo que hacen los programadores cuando un programa falla.</p>",
+   "concepto": "Depuración / secuencias de instrucciones",
+   "dificultad": "facil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Armando robots», Bebras Canadá)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-el-tubo-de-bolitas",
+   "nivel": "kilobyte",
+   "titulo": "El tubo de bolitas",
+   "enunciado": "<p>Hay un tubo transparente abierto de los dos lados en el que entran exactamente 3 bolitas. Las bolitas se meten siempre por el lado IZQUIERDO. Si el tubo ya está lleno y se mete otra bolita, la bolita que estaba más a la derecha se cae por el otro lado.</p><p>Ahora el tubo tiene estas bolitas (mirándolo de izquierda a derecha):</p><pre>[ izquierda ]  ROJA   VERDE   AZUL  [ derecha ]</pre><p>Se meten por la izquierda, una después de la otra, estas tres bolitas:</p><pre>1) AMARILLA\n2) NEGRA\n3) BLANCA</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué bolitas quedan en el tubo y en qué orden, de izquierda a derecha?",
+   "opciones": [
+    "blanca, negra, amarilla",
+    "amarilla, negra, blanca",
+    "negra, amarilla, roja",
+    "blanca, negra, roja"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Al entrar la amarilla el tubo queda amarilla, roja, verde y se cae la azul. Al entrar la negra queda negra, amarilla, roja y se cae la verde. Al entrar la blanca queda blanca, negra, amarilla y se cae la roja. La primera bolita que entró es la primera en salir: esta estructura se llama cola (FIFO) y las computadoras la usan, por ejemplo, para la fila de trabajos de una impresora.</p>",
+   "concepto": "Estructuras de datos / cola (FIFO)",
+   "dificultad": "facil",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Tubo», Desafío Bebras PR 2024)",
+   "incompleto": false
+  },
+  {
+   "id": "ki-dibujar-de-un-solo-trazo",
+   "nivel": "kilobyte",
+   "titulo": "Dibujar de un solo trazo",
+   "enunciado": "<p>Sofía quiere dibujar esta figura SIN levantar el lápiz del papel y sin repetir ninguna línea (cada línea se dibuja una sola vez). Puede pasar varias veces por un mismo punto.</p><pre>   P --------- Q\n   | \\         |\n   |    \\      |\n   |       \\   |\n   S --------- R</pre><p>Las líneas de la figura son: P–Q, Q–R, R–S, S–P y la diagonal P–R.</p>",
+   "imagenes": [],
+   "pregunta": "¿Desde qué punto tiene que empezar Sofía para poder dibujarla?",
+   "opciones": [
+    "Desde el punto P",
+    "Desde el punto Q",
+    "Desde el punto S",
+    "Desde cualquier punto sirve"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Hay que contar cuántas líneas salen de cada punto: de P salen 3 (hacia Q, hacia S y la diagonal hacia R), de Q salen 2, de R salen 3 (hacia Q, hacia S y la diagonal hacia P) y de S salen 2. Los puntos con una cantidad IMPAR de líneas son P y R, y el dibujo de un solo trazo tiene que empezar en uno de esos dos (y terminar en el otro). Si empieza en Q o en S siempre le va a quedar una línea sin dibujar. Entre las opciones, la única válida es P. Esto se llama camino de Euler.</p>",
+   "concepto": "Grafos / camino de Euler",
+   "dificultad": "media",
+   "fuente": "Adaptación estilo Bebras (inspirada en «Dibujando un velero», Desafío Bebras PR 2024)",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-ruta-del-repartidor",
+   "nivel": "megabyte",
+   "titulo": "La ruta del repartidor",
+   "enunciado": "<p>Nico reparte encomiendas en bicicleta. Las plazas del pueblo se llaman A, B, C, D, E y F. Solo existen los siguientes caminos, y cada uno tarda la cantidad de minutos indicada (se pueden recorrer en cualquiera de los dos sentidos):</p><pre>Camino    Minutos\nA - B        4\nA - C        2\nB - C        1\nB - D        5\nC - D        8\nC - E       10\nD - E        2\nD - F        6\nE - F        3</pre><p>Nico sale de la plaza A y debe llegar a la plaza F.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la menor cantidad de minutos que puede tardar?",
+   "opciones": [
+    "13 minutos",
+    "11 minutos",
+    "14 minutos",
+    "16 minutos"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Conviene calcular el tiempo mínimo hasta cada plaza, en orden creciente. A=0. C=2 (por A–C). B=3 (A–C–B: 2+1, mejor que A–B=4). D=8 (A–C–B–D: 3+5, mejor que C–D=2+8=10). E=10 (D–E: 8+2, mejor que C–E=12). F = menor entre D–F (8+6=14) y E–F (10+3=13), o sea 13. La ruta óptima es A–C–B–D–E–F = 2+1+5+2+3 = 13 minutos. El error típico es quedarse con A–C–B–D–F = 14, sin notar que el desvío por E ahorra un minuto.</p>",
+   "concepto": "Grafos ponderados / camino más corto (Dijkstra)",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-puerta-con-memoria",
+   "nivel": "megabyte",
+   "titulo": "La puerta con memoria",
+   "enunciado": "<p>La puerta de un laboratorio tiene solo dos botones: A y B. La puerta recuerda en qué «estado» está y cambia de estado cada vez que se pulsa un botón. Empieza siempre en el estado Inicio.</p><pre>Estado actual | Si se pulsa A | Si se pulsa B\n--------------+---------------+--------------\nInicio        | P             | Inicio\nP             | Q             | Inicio\nQ             | P             | ABIERTA\nABIERTA       | ABIERTA       | ABIERTA</pre><p>Cuando la puerta llega al estado ABIERTA, se abre y ya no vuelve a cerrarse.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál de estas secuencias de botones abre la puerta?",
+   "opciones": [
+    "B A B A",
+    "A A B B",
+    "A B A B",
+    "A A A B"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Se sigue la tabla paso a paso desde Inicio. B A B A: Inicio →B→ Inicio →A→ P →B→ Inicio →A→ P. No abre. A A B B: Inicio →A→ P →A→ Q →B→ ABIERTA: abre en el tercer botón. A B A B: vuelve a Inicio. A A A B: Inicio →A→ P →A→ Q →A→ P →B→ Inicio; la tercera A deshace el avance porque desde Q la A vuelve a P. La puerta se abre cuando aparece el patrón A A B.</p>",
+   "concepto": "Máquinas de estado finito / autómatas",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-los-frascos-desordenados",
+   "nivel": "megabyte",
+   "titulo": "Los frascos desordenados",
+   "enunciado": "<p>En un estante hay 5 frascos con estas etiquetas, de izquierda a derecha:</p><pre>3   7   1   6   2</pre><p>Ana los ordena de menor a mayor con esta regla, repitiéndola hasta que quedan ordenados:</p><ol><li>Mira el primer par de frascos vecinos (posiciones 1 y 2). Si el de la izquierda es mayor que el de la derecha, los intercambia.</li><li>Pasa al siguiente par de vecinos (posiciones 2 y 3), y hace lo mismo.</li><li>Sigue así hasta el último par, y luego vuelve a empezar desde el principio.</li></ol>",
+   "imagenes": [],
+   "pregunta": "¿Cuántos intercambios hace Ana en total hasta dejar los frascos ordenados?",
+   "opciones": [
+    "4 intercambios",
+    "5 intercambios",
+    "6 intercambios",
+    "7 intercambios"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Simulando el método (ordenamiento de burbuja): Pasada 1: 3 7 1 6 2 → 3 1 7 6 2 → 3 1 6 7 2 → 3 1 6 2 7 (van 3). Pasada 2: (3,1) → 1 3 6 2 7; (6,2) → 1 3 2 6 7 (van 5). Pasada 3: (3,2) → 1 2 3 6 7 (van 6). Pasada 4: ningún intercambio. Total: 6. Atajo: la cantidad de intercambios de vecinos es igual a la cantidad de pares dados vuelta en la lista inicial: (3,1), (3,2), (7,1), (7,6), (7,2) y (6,2).</p>",
+   "concepto": "Ordenamiento por intercambios (burbuja) e inversiones",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-el-numero-secreto",
+   "nivel": "megabyte",
+   "titulo": "El número secreto",
+   "enunciado": "<p>La castora Beba pensó un número entero entre 1 y 1000 (ambos incluidos). Nico debe adivinarlo. En cada intento dice un número y Beba responde solamente una de estas tres cosas: «es mayor», «es menor» o «acertaste».</p><p>Nico quiere una estrategia que le garantice acertar, sin importar cuál sea el número secreto ni la mala suerte que tenga.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la menor cantidad de intentos que le alcanza SIEMPRE?",
+   "opciones": [
+    "8 intentos",
+    "9 intentos",
+    "500 intentos",
+    "10 intentos"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>La mejor estrategia es preguntar siempre por el número del medio del rango que queda: cada respuesta descarta la mitad de los candidatos (búsqueda binaria). Con k intentos se pueden distinguir como máximo 2^k posibilidades. Como 2^9 = 512 &lt; 1000, nueve intentos no alcanzan en el peor caso; y 2^10 = 1024 ≥ 1000, así que diez intentos siempre alcanzan.</p>",
+   "concepto": "Búsqueda binaria",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-el-telegrafo-del-castor",
+   "nivel": "megabyte",
+   "titulo": "El telégrafo del castor",
+   "enunciado": "<p>Los castores se mandan mensajes con golpes cortos y largos, que escribimos como 0 y 1. Para no confundirse, cada letra tiene un código distinto y ningún código es el comienzo de otro:</p><pre>Letra | Código\n------+-------\n  A   | 0\n  B   | 10\n  C   | 110\n  D   | 111</pre><p>Llega este mensaje:</p><pre>1101011100</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué dice el mensaje?",
+   "opciones": [
+    "CADBA",
+    "CBDAA",
+    "DABAA",
+    "CBADA"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Se lee de izquierda a derecha y se corta apenas los dígitos leídos forman un código válido (como ningún código es prefijo de otro, nunca hay ambigüedad): 110 → C, 10 → B, 111 → D, 0 → A, 0 → A. Resultado: C B D A A. La cuenta cierra: 3+2+3+1+1 = 10 dígitos.</p>",
+   "concepto": "Codificación / códigos de prefijo (idea de Huffman)",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-comprimir-la-fila-de-pixeles",
+   "nivel": "megabyte",
+   "titulo": "Comprimir la fila de píxeles",
+   "enunciado": "<p>Una fila de una imagen en blanco y negro se guarda así: en vez de anotar píxel por píxel, se anota la longitud de cada tramo de píxeles iguales, empezando por la izquierda. Por ejemplo, la fila</p><pre>###..#</pre><p>se guarda como 3, 2, 1 (tres negros, dos blancos, un negro).</p><p>Esta es la fila que hay que guardar (# = negro, . = blanco):</p><pre>##..###.#....##</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuántos números hacen falta para guardarla con este método?",
+   "opciones": [
+    "6 números",
+    "8 números",
+    "7 números",
+    "15 números"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Se cuentan los tramos de píxeles iguales de izquierda a derecha: ## (2), .. (2), ### (3), . (1), # (1), .... (4), ## (2). Son 7 tramos, así que se guardan 7 números. La suma 2+2+3+1+1+4+2 = 15 coincide con el largo de la fila, lo que sirve de control.</p>",
+   "concepto": "Compresión sin pérdida por longitud de tramos (RLE)",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-mensaje-con-clave-numerica",
+   "nivel": "megabyte",
+   "titulo": "Mensaje con clave numérica",
+   "enunciado": "<p>Los castores cifran mensajes con una clave de tres números: 2 – 0 – 1. La clave se repite todo el tiempo debajo del mensaje, y cada letra se adelanta en el alfabeto tantos lugares como indica el número que le tocó. Si se pasa de la Z, se vuelve a empezar por la A. Se usa el alfabeto de 26 letras, sin Ñ.</p><pre>Mensaje:  C  A  S  T  O  R\nClave:    2  0  1  2  0  1</pre><p>Por ejemplo, la primera letra C se adelanta 2 lugares y se convierte en E.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cómo queda cifrada la palabra CASTOR?",
+   "opciones": [
+    "EAUVOS",
+    "EATVPS",
+    "DATUOS",
+    "EATVOS"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Letra por letra: C+2=E, A+0=A, S+1=T, T+2=V, O+0=O, R+1=S. Resultado: EATVOS. La opción EAUVOS falla en la S (le suma 2 en lugar de 1) y EATVPS falla en la O (le suma 1 en lugar de 0).</p>",
+   "concepto": "Criptografía: cifrado por desplazamiento con clave repetida",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-alarma-del-laboratorio",
+   "nivel": "megabyte",
+   "titulo": "La alarma del laboratorio",
+   "enunciado": "<p>Un laboratorio tiene tres sensores: P (puerta), Q (ventana) y R (movimiento). Cada sensor puede estar en 1 (activado) o en 0 (apagado). La alarma suena exactamente cuando se cumple esta condición:</p><pre>ALARMA = (P Y (NO Q))  O  (Q Y R)</pre><p>Recordá que «X Y Z» vale 1 solo si X y Z valen las dos 1; «X O Z» vale 1 si al menos una de las dos vale 1; y «NO X» da vuelta el valor.</p>",
+   "imagenes": [],
+   "pregunta": "¿En cuál de estas situaciones SUENA la alarma?",
+   "opciones": [
+    "P=0, Q=1, R=1",
+    "P=0, Q=0, R=1",
+    "P=1, Q=1, R=0",
+    "P=0, Q=0, R=0"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Se evalúan las dos partes de la fórmula. P=0,Q=0,R=1: (0 Y 1)=0 y (0 Y 1)=0 → 0. P=1,Q=1,R=0: (1 Y 0)=0 y (1 Y 0)=0 → 0. P=0,Q=1,R=1: (0 Y 0)=0 pero (Q Y R)=(1 Y 1)=1 → 1, SUENA. P=0,Q=0,R=0 → 0.</p>",
+   "concepto": "Lógica booleana / evaluación de expresiones",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-los-canos-de-la-represa",
+   "nivel": "megabyte",
+   "titulo": "Los caños de la represa",
+   "enunciado": "<p>El agua sale del tanque S y debe llegar al pueblo T por una red de caños. Cada caño lleva el agua en un solo sentido y soporta como máximo la cantidad de litros por minuto que se indica:</p><pre>Caño     Capacidad (litros por minuto)\nS -&gt; A        4\nS -&gt; B        3\nA -&gt; C        3\nA -&gt; B        2\nB -&gt; D        4\nC -&gt; D        2\nC -&gt; T        2\nD -&gt; T        3</pre><p>Los nodos A, B, C y D no guardan agua: todo lo que entra en ellos debe salir.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuántos litros por minuto pueden llegar como máximo al pueblo T?",
+   "opciones": [
+    "4 litros por minuto",
+    "6 litros por minuto",
+    "5 litros por minuto",
+    "7 litros por minuto"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Tope: los únicos caños que entran a T son C→T (2) y D→T (3), así que nunca pueden llegar más de 5. Y ese tope se alcanza: S→A→C→T lleva 2, S→A→B→D→T lleva 2 (A→B tiene capacidad 2) y S→B→D→T lleva 1. Control: S→A lleva 4 (su máximo), S→B lleva 1 de 3, B→D lleva 3 de 4, D→T lleva 3 (su máximo) y C→T lleva 2 (su máximo). Máximo = 5.</p>",
+   "concepto": "Flujo máximo en redes / corte mínimo",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-el-arbol-de-busqueda",
+   "nivel": "megabyte",
+   "titulo": "El árbol de búsqueda",
+   "enunciado": "<p>Los castores guardan los números de socio en un árbol con esta regla: en cada nodo, todos los números que cuelgan a la izquierda son menores que él, y todos los que cuelgan a la derecha son mayores.</p><pre>              50\n           /      \\\n         30        70\n        /  \\      /  \\\n      20    40  60    80\n           /  \\\n         35    45</pre><p>Para buscar un número se empieza en la raíz (50) y se lo compara con el número del nodo: si es igual, se encontró; si es menor, se sigue por la izquierda; si es mayor, por la derecha. Si hay que seguir por una rama que no existe, el número no está en el árbol.</p><p>Nico busca el número 37.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuántas comparaciones hace hasta darse cuenta de que 37 no está?",
+   "opciones": [
+    "3 comparaciones",
+    "5 comparaciones",
+    "7 comparaciones",
+    "4 comparaciones"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Camino de búsqueda: 1) 50: 37 es menor → izquierda. 2) 30: 37 es mayor → derecha. 3) 40: 37 es menor → izquierda. 4) 35: 37 es mayor, debería ir a la derecha de 35, pero 35 no tiene hijos: no está. Son 4 comparaciones; no hace falta mirar los 7 nodos, esa es la ventaja del árbol de búsqueda.</p>",
+   "concepto": "Árboles binarios de búsqueda",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-via-muerta",
+   "nivel": "megabyte",
+   "titulo": "La vía muerta",
+   "enunciado": "<p>Cuatro vagones llegan a la estación en este orden: primero A, después B, después C y por último D. La estación tiene una vía muerta (un callejón sin salida) que funciona así:</p><pre>        entrada  --&gt;  [ VÍA MUERTA ]  --&gt;  salida</pre><p>Cada vagón que llega puede entrar a la vía muerta, y en cualquier momento se puede sacar un vagón de la vía muerta hacia la salida. Como la vía muerta es un callejón, siempre sale primero el último vagón que entró. Un vagón que ya salió no puede volver a entrar.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál de estos órdenes de salida es IMPOSIBLE de conseguir?",
+   "opciones": [
+    "C A D B",
+    "D C B A",
+    "A C D B",
+    "B A C D"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>La vía muerta funciona como una pila (el último que entra es el primero que sale). D C B A: entran A, B, C, D y después salen todos. Posible. A C D B: entra y sale A; entran B y C, sale C; entra y sale D; sale B. Posible. B A C D: entran A y B, sale B, sale A; entra y sale C; entra y sale D. Posible. C A D B: para que salga primero C, adentro tienen que estar A y B con B encima de A, así que A nunca puede salir antes que B. Imposible.</p>",
+   "concepto": "Pilas (LIFO) y estructuras de datos",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-el-bit-de-paridad",
+   "nivel": "megabyte",
+   "titulo": "El bit de paridad",
+   "enunciado": "<p>Para detectar errores, los castores mandan los datos en un cuadro de 4×4 ceros y unos, pero le agregan una fila y una columna extra. Cada número extra se elige de modo que en su fila y en su columna la cantidad de unos sea PAR (contando el número extra).</p><p>Este cuadro llegó por la radio, y se sabe que exactamente un número se dio vuelta en el camino:</p><pre>        C1  C2  C3  C4  C5\n  F1     1   0   1   1   1\n  F2     0   0   1   0   1\n  F3     1   0   0   1   1\n  F4     0   1   1   1   1\n  F5     0   0   1   1   0</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es el número equivocado?",
+   "opciones": [
+    "El de la fila F2, columna C3",
+    "El de la fila F3, columna C2",
+    "El de la fila F2, columna C2",
+    "El de la fila F3, columna C3"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Se cuentan los unos de cada fila y de cada columna. Filas: F1=4 (par), F2=2 (par), F3=3 (IMPAR), F4=4 (par), F5=2 (par). Columnas: C1=2, C2=1 (IMPAR), C3=4, C4=4, C5=4. Falla la fila F3 y la columna C2: el error está en el cruce (F3, C2); ese 0 debería ser un 1. Al darse vuelta un solo bit siempre falla exactamente una fila y una columna, y su cruce señala la posición.</p>",
+   "concepto": "Paridad y detección/corrección de errores",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-obra-de-teatro",
+   "nivel": "megabyte",
+   "titulo": "La obra de teatro",
+   "enunciado": "<p>El curso prepara una obra. Cada tarea dura la cantidad de días indicada y algunas no pueden empezar hasta que otras terminen:</p><pre>Tarea | Días | No puede empezar hasta que terminen\n------+------+------------------------------------\n  A   |  3   | (ninguna)\n  B   |  2   | A\n  C   |  4   | A\n  D   |  1   | B\n  E   |  2   | C y D\n  F   |  3   | E</pre><p>Hay suficientes personas: dos tareas pueden hacerse al mismo tiempo si sus condiciones lo permiten.</p>",
+   "imagenes": [],
+   "pregunta": "¿En cuántos días como mínimo queda lista la obra?",
+   "opciones": [
+    "10 días",
+    "11 días",
+    "15 días",
+    "12 días"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Momento más temprano en que termina cada tarea: A el día 3; B el día 5 y C el día 7 (en paralelo); D el día 6; E necesita C (7) y D (6), empieza el 7 y termina el 9; F termina el 12. El camino crítico es A–C–E–F = 3+4+2+3 = 12. Sumar todas las duraciones (15) es el error típico: ignora el paralelismo.</p>",
+   "concepto": "Planificación de tareas / camino crítico",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-los-examenes-del-colegio",
+   "nivel": "megabyte",
+   "titulo": "Los exámenes del colegio",
+   "enunciado": "<p>El colegio debe tomar cinco exámenes: A, B, C, D y E. Dos exámenes no pueden tomarse en la misma franja horaria si hay algún estudiante anotado en los dos. Estas son las parejas conflictivas:</p><pre>A con B\nA con C\nA con E\nB con C\nB con D\nC con D\nD con E</pre><p>Todas las demás parejas pueden ir juntas en la misma franja.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la menor cantidad de franjas horarias que se necesitan?",
+   "opciones": [
+    "3 franjas",
+    "2 franjas",
+    "4 franjas",
+    "5 franjas"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Con 2 no alcanza: A, B y C están en conflicto entre sí (A–B, A–C, B–C), así que necesitan tres franjas distintas. Y 3 alcanza: franja 1 = {A, D}, franja 2 = {B, E}, franja 3 = {C}. A–D y B–E no figuran en la lista de conflictos, y todas las parejas conflictivas quedaron separadas.</p>",
+   "concepto": "Coloreo de grafos / asignación de recursos",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-las-lamparas-del-faro",
+   "nivel": "megabyte",
+   "titulo": "Las lámparas del faro",
+   "enunciado": "<p>Un faro se comunica con los barcos prendiendo y apagando lámparas. Cada lámpara puede estar prendida o apagada, y un mensaje es una combinación cualquiera de lámparas prendidas y apagadas (incluida la combinación con todas apagadas).</p><p>El faro necesita poder mandar 100 mensajes distintos.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuál es la menor cantidad de lámparas que necesita?",
+   "opciones": [
+    "5 lámparas",
+    "7 lámparas",
+    "6 lámparas",
+    "10 lámparas"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Cada lámpara duplica la cantidad de combinaciones: con n lámparas hay 2^n mensajes (idea de los números binarios). 5 lámparas dan 32, 6 dan 64 (no alcanzan) y 7 dan 128 (alcanzan). La trampa está en pensar que cada lámpara suma un mensaje en vez de duplicarlos.</p>",
+   "concepto": "Representación binaria / conteo de combinaciones",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-los-talleres-de-la-feria",
+   "nivel": "megabyte",
+   "titulo": "Los talleres de la feria",
+   "enunciado": "<p>En la feria de ciencias hay seis talleres, cada uno con su horario fijo:</p><pre>Taller | Empieza | Termina\n-------+---------+--------\n  T1   |  9:00   | 10:30\n  T2   |  9:30   | 10:00\n  T3   | 10:00   | 11:00\n  T4   | 10:30   | 12:00\n  T5   | 11:30   | 13:00\n  T6   | 12:00   | 13:30</pre><p>Sofía quiere ir a la mayor cantidad posible de talleres completos. No puede estar en dos talleres a la vez, pero sí puede entrar a un taller que empieza justo a la hora en que termina el anterior.</p>",
+   "imagenes": [],
+   "pregunta": "¿A cuántos talleres como máximo puede ir?",
+   "opciones": [
+    "2 talleres",
+    "4 talleres",
+    "3 talleres",
+    "5 talleres"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Buena estrategia: elegir siempre el taller que termina más temprano entre los que todavía se pueden tomar. Una combinación de 3 es T1 (9:00–10:30), T4 (10:30–12:00) y T6 (12:00–13:30). Otra es T2, T3 y T5. No se puede llegar a 4: entre T1, T2 y T3 se pueden elegir a lo sumo 2, y entre T4, T5 y T6 también a lo sumo 2; para llegar a 4 habría que tomar T2, T3, T4 y T6, pero T3 termina 11:00 y T4 empieza 10:30, se superponen.</p>",
+   "concepto": "Algoritmos voraces / selección de actividades",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-las-torres-del-monasterio",
+   "nivel": "megabyte",
+   "titulo": "Las torres del monasterio",
+   "enunciado": "<p>En un monasterio hay tres varillas: la izquierda, la del medio y la derecha. En la varilla izquierda hay 5 discos de distinto tamaño, apilados con el más grande abajo y el más chico arriba.</p><p>Los monjes quieren pasar la pila entera a la varilla derecha, con estas reglas:</p><ul><li>Se mueve un solo disco por vez, y siempre el de más arriba de una varilla.</li><li>Nunca se puede apoyar un disco sobre otro más chico.</li></ul><p>Se sabe que con 1 disco hacen falta 1 movimiento, con 2 discos 3 movimientos, con 3 discos 7 movimientos y con 4 discos 15 movimientos.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuántos movimientos hacen falta como mínimo con 5 discos?",
+   "opciones": [
+    "31 movimientos",
+    "21 movimientos",
+    "25 movimientos",
+    "32 movimientos"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Para mover 5 discos: pasar los 4 de arriba a la varilla del medio (15), mover el disco más grande a la derecha (1) y pasar los 4 encima del grande (15). Total 15+1+15 = 31. La regla general es 2^n − 1: 1, 3, 7, 15, 31, 63…</p>",
+   "concepto": "Recursión / Torres de Hanói",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-torta-de-cumpleanos",
+   "nivel": "megabyte",
+   "titulo": "La torta de cumpleaños",
+   "enunciado": "<p>Para hacer una torta hay que cumplir estos cinco pasos, pero no en cualquier orden:</p><pre>1. Precalentar el horno\n2. Batir los huevos\n3. Mezclar la harina con los huevos batidos\n4. Agregar el azúcar a la mezcla\n5. Hornear la torta</pre><p>Las condiciones son:</p><ul><li>El paso 3 solo puede hacerse después del paso 2.</li><li>El paso 4 solo puede hacerse después del paso 3.</li><li>El paso 5 solo puede hacerse después del paso 4 y también después del paso 1.</li></ul>",
+   "imagenes": [],
+   "pregunta": "¿Cuál de estos órdenes es válido?",
+   "opciones": [
+    "2, 3, 4, 5, 1",
+    "1, 2, 4, 3, 5",
+    "2, 1, 3, 4, 5",
+    "1, 3, 2, 4, 5"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Condiciones: 2 antes que 3, 3 antes que 4, y 4 y 1 antes que 5. En 2,3,4,5,1 el horno se precalienta después de hornear. En 1,2,4,3,5 el azúcar se agrega antes de que exista la mezcla. En 1,3,2,4,5 se mezcla la harina con los huevos antes de batirlos. Solo 2,1,3,4,5 cumple las cuatro condiciones. El paso 1 puede ir en cualquier lugar mientras quede antes del 5.</p>",
+   "concepto": "Orden topológico / dependencias entre tareas",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-los-casilleros-del-club",
+   "nivel": "megabyte",
+   "titulo": "Los casilleros del club",
+   "enunciado": "<p>El club tiene 7 casilleros numerados del 0 al 6, todos vacíos al principio. Para guardar la ficha de un socio se usa esta regla:</p><ol><li>Se calcula el resto de dividir el número de socio por 7. Ese es el casillero que le toca.</li><li>Si ese casillero está ocupado, se prueba con el siguiente (casillero + 1). Si también está ocupado, con el siguiente, y así sucesivamente. Después del casillero 6 se vuelve al 0.</li></ol><p>Se guardan las fichas en este orden:</p><pre>23, 17, 31, 10, 45</pre>",
+   "imagenes": [],
+   "pregunta": "¿En qué casillero queda guardada la ficha del socio 45?",
+   "opciones": [
+    "Casillero 3",
+    "Casillero 6",
+    "Casillero 4",
+    "Casillero 5"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Restos al dividir por 7: 23→2, 17→3, 31→3, 10→3, 45→3. El 23 va al 2 (libre) y el 17 al 3 (libre). El 31 quiere el 3 (ocupado) y va al 4. El 10 quiere el 3 y el 4 (ocupados) y va al 5. El 45 quiere el 3, 4 y 5 (ocupados) y va al casillero 6. Estado final: 2=23, 3=17, 4=31, 5=10, 6=45.</p>",
+   "concepto": "Tablas hash y resolución de colisiones por sondeo lineal",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "me-la-cadena-de-mensajes",
+   "nivel": "megabyte",
+   "titulo": "La cadena de mensajes",
+   "enunciado": "<p>Ocho amigos se pasan una noticia. Cada uno solo puede hablar con las personas de su lista de contactos:</p><pre>Persona | Habla con\n--------+---------------------------\nAna     | Beto, Carla\nBeto    | Ana, Dani\nCarla   | Ana, Dani, Elsa\nDani    | Beto, Carla, Fito\nElsa    | Carla, Gino\nFito    | Dani, Gino\nGino    | Elsa, Fito, Hugo\nHugo    | Gino</pre><p>El día 1, Ana le cuenta la noticia a todos sus contactos. El día 2, todos los que ya se enteraron se la cuentan a todos sus contactos, y así siguen todos los días.</p>",
+   "imagenes": [],
+   "pregunta": "¿En qué día se entera Hugo?",
+   "opciones": [
+    "Día 2",
+    "Día 3",
+    "Día 5",
+    "Día 4"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Se avanza por capas desde Ana (búsqueda a lo ancho). Día 1: Beto y Carla. Día 2: Dani y Elsa. Día 3: Fito (por Dani) y Gino (por Elsa). Día 4: Hugo (por Gino, su único contacto). Lo que cuenta es el camino más corto: Ana–Carla–Elsa–Gino–Hugo, de 4 pasos.</p>",
+   "concepto": "Grafos / búsqueda en anchura y distancia mínima",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras",
+   "incompleto": false
+  },
+  {
+   "id": "gi-el-acumulador-caprichoso",
+   "nivel": "gigabyte",
+   "titulo": "El acumulador caprichoso",
+   "enunciado": "<p>Ana escribió el siguiente programa. El operador <code>mod</code> devuelve el resto de la división entera.</p><pre>variables suma, i\nsuma &lt;- 0\npara i desde 1 hasta 10 hacer\n    si i mod 3 = 0 entonces\n        suma &lt;- suma + i\n    sino\n        suma &lt;- suma - 1\n    fin si\nfin para\nmostrar suma</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué valor muestra el programa?",
+   "opciones": [
+    "18",
+    "8",
+    "25",
+    "11"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Entre 1 y 10 hay exactamente 3 múltiplos de 3: el 3, el 6 y el 9. Para ellos se ejecuta la rama «entonces» y se suman: 3+6+9 = 18. Los otros 7 números (1, 2, 4, 5, 7, 8, 10) caen en la rama «sino» y cada uno resta 1: −7. Total: 18 − 7 = 11. El error típico es olvidar la rama «sino» y responder 18.</p>",
+   "concepto": "Variables y acumuladores; condicionales dentro de un bucle",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-los-pares-de-castores",
+   "nivel": "gigabyte",
+   "titulo": "Los pares de castores",
+   "enunciado": "<p>En una represa hay 5 castores numerados del 1 al 5. Este programa cuenta cuántos saludos ocurren.</p><pre>variables cuenta, i, j\ncuenta &lt;- 0\npara i desde 1 hasta 5 hacer\n    para j desde i hasta 5 hacer\n        cuenta &lt;- cuenta + 1\n    fin para\nfin para\nmostrar cuenta</pre><p>Observá con cuidado el valor inicial del bucle interno.</p>",
+   "imagenes": [],
+   "pregunta": "¿Qué muestra el programa?",
+   "opciones": [
+    "10",
+    "15",
+    "20",
+    "25"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>El bucle interno NO empieza siempre en 1: empieza en i. Entonces, para i=1 el bucle interno corre con j=1..5 (5 veces), para i=2 corre j=2..5 (4 veces), para i=3 son 3 veces, para i=4 son 2 veces y para i=5 es 1 vez. Total: 5+4+3+2+1 = 15. La trampa es responder 25 (como si fueran dos bucles completos) o 10 (como si j empezara en i+1).</p>",
+   "concepto": "Bucles anidados dependientes",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-la-maquina-de-colores",
+   "nivel": "gigabyte",
+   "titulo": "La máquina de colores",
+   "enunciado": "<p>Una máquina pinta cada número de un color según esta función:</p><pre>funcion clasificar(n)\n    si n mod 2 = 0 y n mod 3 = 0 entonces\n        devolver &quot;AZUL&quot;\n    sino\n        si n mod 2 = 0 entonces\n            devolver &quot;VERDE&quot;\n        sino\n            si n mod 3 = 0 entonces\n                devolver &quot;ROJO&quot;\n            sino\n                devolver &quot;GRIS&quot;\n            fin si\n        fin si\n    fin si\nfin funcion</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué colores devuelve la máquina para los números 6, 8, 9 y 11, en ese orden?",
+   "opciones": [
+    "AZUL, VERDE, ROJO, GRIS",
+    "VERDE, VERDE, ROJO, GRIS",
+    "AZUL, VERDE, GRIS, ROJO",
+    "ROJO, AZUL, VERDE, GRIS"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>n=6: es par y múltiplo de 3, entra en la primera condición → AZUL. n=8: es par pero no múltiplo de 3 → VERDE. n=9: no es par, salta a la tercera condición y es múltiplo de 3 → ROJO. n=11: no es par ni múltiplo de 3 → GRIS. La clave es que el orden de los «si» importa: el caso AZUL debe probarse primero, porque si no, el 6 se clasificaría como VERDE.</p>",
+   "concepto": "Condicionales anidados y orden de evaluación",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-la-funcion-misteriosa",
+   "nivel": "gigabyte",
+   "titulo": "La función misteriosa",
+   "enunciado": "<p>El operador <code>div</code> es la división entera (descarta el resto) y <code>mod</code> es el resto.</p><pre>funcion misterio(n)\n    si n &lt; 10 entonces\n        devolver n\n    sino\n        devolver (n mod 10) + misterio(n div 10)\n    fin si\nfin funcion\n\nmostrar misterio(4729)</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué muestra el programa?",
+   "opciones": [
+    "9",
+    "22",
+    "4729",
+    "4"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>La función va cortando el último dígito y sumándolo al resultado de llamarse a sí misma con el número sin ese dígito: misterio(4729) = 9 + misterio(472) = 9 + 2 + misterio(47) = 9 + 2 + 7 + misterio(4). Como 4 &lt; 10, misterio(4) devuelve 4. Sumando: 9 + 2 + 7 + 4 = 22. La función calcula la suma de los dígitos.</p>",
+   "concepto": "Recursión con caso base; división entera y módulo",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-cuanto-trabaja-fibonacci",
+   "nivel": "gigabyte",
+   "titulo": "¿Cuánto trabaja Fibonacci?",
+   "enunciado": "<p>Esta es la definición recursiva clásica de Fibonacci:</p><pre>funcion fib(n)\n    si n &lt;= 1 entonces\n        devolver n\n    fin si\n    devolver fib(n-1) + fib(n-2)\nfin funcion</pre><p>Contamos UNA llamada cada vez que se entra a la función <code>fib</code>, incluida la primera.</p>",
+   "imagenes": [],
+   "pregunta": "¿Cuántas llamadas en total se realizan al calcular fib(6)?",
+   "opciones": [
+    "6",
+    "13",
+    "15",
+    "25"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Si L(n) es el total de llamadas para fib(n): L(0)=1 y L(1)=1, porque llegan al caso base sin llamar a nadie más. Para n≥2, L(n) = 1 + L(n−1) + L(n−2). Entonces L(2)=3, L(3)=5, L(4)=9, L(5)=15 y L(6)=25. Ojo: 8 es el VALOR de fib(6), no la cantidad de llamadas; 15 es el total de llamadas para fib(5). Esto muestra por qué la versión recursiva sin memoria es tan lenta: recalcula lo mismo muchas veces.</p>",
+   "concepto": "Recursión, árbol de llamadas y costo de un algoritmo",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-el-vuelo-de-collatz",
+   "nivel": "gigabyte",
+   "titulo": "El vuelo de Collatz",
+   "enunciado": "<p>La secuencia de Collatz aplica esta regla hasta llegar a 1:</p><pre>variables n, pasos\nn &lt;- 11\npasos &lt;- 0\nmientras n &lt;&gt; 1 hacer\n    si n mod 2 = 0 entonces\n        n &lt;- n div 2\n    sino\n        n &lt;- 3 * n + 1\n    fin si\n    pasos &lt;- pasos + 1\nfin mientras\nmostrar pasos</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuántos pasos muestra el programa cuando se empieza en 11?",
+   "opciones": [
+    "11",
+    "12",
+    "14",
+    "52"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>La secuencia completa es: 11 → 34 → 17 → 52 → 26 → 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1. Después del 11 aparecen 14 números más, y cada uno corresponde a una vuelta del bucle, o sea 14 pasos. Notá que 52 es el valor MÁS GRANDE que alcanza la secuencia, no la cantidad de pasos: ese es el distractor clásico.</p>",
+   "concepto": "Bucle «mientras» con condición no obvia; algoritmo de Collatz",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-el-algoritmo-de-euclides",
+   "nivel": "gigabyte",
+   "titulo": "El algoritmo de Euclides",
+   "enunciado": "<p>Este es el algoritmo de Euclides para el máximo común divisor:</p><pre>funcion mcd(a, b)\n    variables r\n    mientras b &lt;&gt; 0 hacer\n        r &lt;- a mod b\n        a &lt;- b\n        b &lt;- r\n    fin mientras\n    devolver a\nfin funcion\n\nmostrar mcd(84, 30)</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuántas veces se ejecuta el cuerpo del «mientras» y qué valor se devuelve?",
+   "opciones": [
+    "2 veces, devuelve 6",
+    "3 veces, devuelve 6",
+    "3 veces, devuelve 2",
+    "4 veces, devuelve 12"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Trazamos los pares (a, b): empieza (84, 30). Vuelta 1: r = 84 mod 30 = 24 → (30, 24). Vuelta 2: r = 30 mod 24 = 6 → (24, 6). Vuelta 3: r = 24 mod 6 = 0 → (6, 0). Ahora b = 0 y el bucle termina, devolviendo a = 6. Fueron 3 vueltas. Comprobación: 84 = 6 × 14 y 30 = 6 × 5, y 14 y 5 no tienen divisores comunes.</p>",
+   "concepto": "Algoritmo de Euclides; traza de bucle con dos variables",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-buscando-en-la-biblioteca",
+   "nivel": "gigabyte",
+   "titulo": "Buscando en la biblioteca",
+   "enunciado": "<p>El arreglo A está ordenado y sus posiciones se numeran del 1 al 10:</p><pre>A = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]\n\nfuncion buscar(A, x)\n    variables izq, der, medio\n    izq &lt;- 1\n    der &lt;- 10\n    mientras izq &lt;= der hacer\n        medio &lt;- (izq + der) div 2\n        si A[medio] = x entonces\n            devolver medio\n        fin si\n        si A[medio] &lt; x entonces\n            izq &lt;- medio + 1\n        sino\n            der &lt;- medio - 1\n        fin si\n    fin mientras\n    devolver 0\nfin funcion\n\nmostrar buscar(A, 23)</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué valores de A se comparan con 23, en orden, y qué devuelve la función?",
+   "opciones": [
+    "16, 56, 23 y devuelve 6",
+    "16, 38, 23 y devuelve 6",
+    "16, 56, 38, 23 y devuelve 23",
+    "2, 5, 8, 12, 16, 23 y devuelve 6"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Vuelta 1: izq=1, der=10, medio = 11 div 2 = 5, A[5] = 16. Como 16 &lt; 23 → izq = 6. Vuelta 2: izq=6, der=10, medio = 8, A[8] = 56. Como 56 &gt; 23 → der = 7. Vuelta 3: izq=6, der=7, medio = 6, A[6] = 23: ¡encontrado! Devuelve la POSICIÓN 6, no el valor. Se compararon 16, 56 y 23: solo 3 comparaciones para 10 elementos. La opción D describe una búsqueda lineal.</p>",
+   "concepto": "Búsqueda binaria; división entera",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-una-sola-pasada-de-burbuja",
+   "nivel": "gigabyte",
+   "titulo": "Una sola pasada de burbuja",
+   "enunciado": "<p>Este fragmento realiza UNA pasada del ordenamiento de burbuja sobre un arreglo de 5 elementos (posiciones 1 a 5):</p><pre>A = [5, 1, 4, 2, 8]\n\npara i desde 1 hasta 4 hacer\n    si A[i] &gt; A[i+1] entonces\n        t &lt;- A[i]\n        A[i] &lt;- A[i+1]\n        A[i+1] &lt;- t\n    fin si\nfin para\nmostrar A</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cómo queda el arreglo al terminar?",
+   "opciones": [
+    "[1, 2, 4, 5, 8]",
+    "[1, 4, 2, 5, 8]",
+    "[1, 5, 4, 2, 8]",
+    "[5, 1, 4, 2, 8]"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>Vamos comparando vecinos e intercambiando si están desordenados. i=1: 5&gt;1 → [1,5,4,2,8]. i=2: 5&gt;4 → [1,4,5,2,8]. i=3: 5&gt;2 → [1,4,2,5,8]. i=4: 5&gt;8 es falso, no hay intercambio. Resultado: [1,4,2,5,8]. Una sola pasada NO ordena el arreglo: solo garantiza que el elemento más grande quede al final.</p>",
+   "concepto": "Algoritmos de ordenamiento: burbuja, una pasada",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-la-pila-y-la-cola",
+   "nivel": "gigabyte",
+   "titulo": "La pila y la cola",
+   "enunciado": "<p>Una máquina clasificadora recibe los números del 1 al 6 en orden. Los pares van a una PILA (el último que entra es el primero que sale) y los impares a una COLA (el primero que entra es el primero que sale). Después se vacía primero la cola y luego la pila.</p><pre>pila &lt;- vacía\ncola &lt;- vacía\npara n desde 1 hasta 6 hacer\n    si n mod 2 = 0 entonces\n        apilar(pila, n)\n    sino\n        encolar(cola, n)\n    fin si\nfin para\n\nmientras cola no esté vacía hacer\n    mostrar desencolar(cola)\nfin mientras\nmientras pila no esté vacía hacer\n    mostrar desapilar(pila)\nfin mientras</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué secuencia muestra la máquina?",
+   "opciones": [
+    "1, 3, 5, 2, 4, 6",
+    "5, 3, 1, 6, 4, 2",
+    "2, 4, 6, 1, 3, 5",
+    "1, 3, 5, 6, 4, 2"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Los impares 1, 3, 5 entran a la cola en ese orden. Los pares 2, 4, 6 se apilan: 2 abajo, luego 4, y 6 arriba de todo. Al vaciar la cola sale en el MISMO orden en que entró: 1, 3, 5. Al vaciar la pila sale en orden INVERSO, empezando por el de arriba: 6, 4, 2. La secuencia final es 1, 3, 5, 6, 4, 2.</p>",
+   "concepto": "Estructuras de datos: pilas (LIFO) y colas (FIFO)",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-el-juego-de-la-ronda",
+   "nivel": "gigabyte",
+   "titulo": "El juego de la ronda",
+   "enunciado": "<p>Seis chicos están formados en una cola, numerados del 1 al 6 (el 1 está adelante). Se repite el siguiente juego hasta que quede uno solo:</p><pre>cola = [1, 2, 3, 4, 5, 6]\n\nmientras longitud(cola) &gt; 1 hacer\n    x &lt;- desencolar(cola)\n    encolar(cola, x)\n    y &lt;- desencolar(cola)\nfin mientras\nmostrar frente(cola)</pre><p>Es decir: el primero de la fila se va al final (se salva por ahora) y el siguiente queda eliminado.</p>",
+   "imagenes": [],
+   "pregunta": "¿Qué número muestra el programa?",
+   "opciones": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Trazamos la cola vuelta por vuelta. [1,2,3,4,5,6]: sale el 1 y vuelve al final → [2,3,4,5,6,1]; se elimina el 2 → [3,4,5,6,1]. Sale el 3 y vuelve → [4,5,6,1,3]; se elimina el 4 → [5,6,1,3]. Sale el 5 y vuelve → [6,1,3,5]; se elimina el 6 → [1,3,5]. Sale el 1 y vuelve → [3,5,1]; se elimina el 3 → [5,1]. Sale el 5 y vuelve → [1,5]; se elimina el 1 → [5]. Queda el 5.</p>",
+   "concepto": "Simulación con colas (FIFO); problema de Josefo",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-recorriendo-el-arbol",
+   "nivel": "gigabyte",
+   "titulo": "Recorriendo el árbol",
+   "enunciado": "<p>Un árbol binario se guarda con tres arreglos. La raíz es el nodo 1 y el 0 significa «no hay hijo».</p><pre>nodo:   1   2   3   4   5   6   7   8\nvalor:  8   3  10   1   6  14   4   7\nizq:    2   4   0   0   7   0   0   0\nder:    3   5   6   0   8   0   0   0</pre><p>Se aplica este recorrido:</p><pre>funcion recorrer(i)\n    si i = 0 entonces\n        devolver\n    fin si\n    recorrer(izq[i])\n    recorrer(der[i])\n    mostrar valor[i]\nfin funcion\n\nrecorrer(1)</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué secuencia de valores se muestra?",
+   "opciones": [
+    "8, 3, 1, 6, 4, 7, 10, 14",
+    "1, 3, 4, 6, 7, 8, 10, 14",
+    "1, 4, 7, 6, 3, 14, 10, 8",
+    "8, 10, 14, 3, 6, 7, 4, 1"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>Como el «mostrar» está DESPUÉS de las dos llamadas recursivas, se trata de un recorrido en POSTORDEN: primero el subárbol izquierdo, después el derecho y recién al final la raíz. El árbol es: raíz 8, con hijo izquierdo 3 y derecho 10; el 3 tiene hijos 1 y 6; el 6 tiene hijos 4 y 7; el 10 solo tiene hijo derecho 14. Postorden del subárbol del 3: 1, 4, 7, 6, 3. Del subárbol del 10: 14, 10. Finalmente la raíz 8. Secuencia: 1, 4, 7, 6, 3, 14, 10, 8. La opción A es el PREORDEN y la B es el INORDEN.</p>",
+   "concepto": "Árboles binarios y recorridos recursivos",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-contando-operaciones",
+   "nivel": "gigabyte",
+   "titulo": "Contando operaciones",
+   "enunciado": "<p>La variable <code>c</code> cuenta cuántas veces se ejecuta el cuerpo del bucle interno:</p><pre>variables c, i, j, n\nn &lt;- 16\nc &lt;- 0\npara i desde 1 hasta n hacer\n    j &lt;- 1\n    mientras j &lt;= n hacer\n        c &lt;- c + 1\n        j &lt;- j * 2\n    fin mientras\nfin para\nmostrar c</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué valor muestra?",
+   "opciones": [
+    "32",
+    "256",
+    "64",
+    "80"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>El bucle interno no suma de a 1: DUPLICA j en cada vuelta. Con n=16, j toma los valores 1, 2, 4, 8 y 16 (todos ≤ 16) y luego 32, que ya no cumple la condición. Son 5 vueltas del bucle interno. El bucle externo se repite 16 veces y el interno se reinicia cada vez. Total: 16 × 5 = 80. La opción 256 = 16×16 sería la respuesta si el bucle interno avanzara de a 1: por eso duplicar en vez de sumar hace al algoritmo muchísimo más rápido cuando n crece.</p>",
+   "concepto": "Complejidad básica: bucle logarítmico dentro de uno lineal",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-depuracion-el-maximo-que-falla",
+   "nivel": "gigabyte",
+   "titulo": "Depuración: el máximo que falla",
+   "enunciado": "<p>Un estudiante escribió esta función para encontrar el elemento más grande de un arreglo de n elementos (posiciones 1 a n):</p><pre>funcion maximo(A, n)\n    variables m, i\n    m &lt;- 0\n    para i desde 1 hasta n hacer\n        si A[i] &gt; m entonces\n            m &lt;- A[i]\n        fin si\n    fin para\n    devolver m\nfin funcion</pre><p>La función funciona bien casi siempre, pero tiene un error.</p>",
+   "imagenes": [],
+   "pregunta": "¿Con cuál de estos arreglos devuelve un resultado INCORRECTO?",
+   "opciones": [
+    "[3, -7, 12, 0]",
+    "[-5, -2, -9, -1]",
+    "[1, 2, 3, 4]",
+    "[10, 10, 10]"
+   ],
+   "respuesta": 1,
+   "explicacion": "<p>El error está en inicializar m con 0 en lugar de con A[1]. Con el arreglo [−5, −2, −9, −1] ningún elemento es mayor que 0, así que la condición nunca se cumple, m nunca cambia y la función devuelve 0, aunque el 0 ni siquiera está en el arreglo. La respuesta correcta debería ser −1. En las otras opciones hay al menos un valor mayor que 0, así que el resultado sale bien por casualidad. La corrección es escribir m ← A[1] y recorrer desde i = 2.</p>",
+   "concepto": "Depuración; inicialización de una variable acumuladora",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-depuracion-la-suma-que-no-suma",
+   "nivel": "gigabyte",
+   "titulo": "Depuración: la suma que no suma",
+   "enunciado": "<p>Esta función debería devolver la suma de todos los números pares de un arreglo, pero tiene un error en una sola línea:</p><pre>funcion sumaPares(A, n)\n    variables s, i\n    s &lt;- 0\n    para i desde 1 hasta n hacer\n        si A[i] mod 2 = 0 entonces\n            s &lt;- A[i]\n        fin si\n    fin para\n    devolver s\nfin funcion\n\nmostrar sumaPares([4, 7, 2, 9, 6], 5)</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué devuelve el programa tal como está escrito, y cuál es la corrección?",
+   "opciones": [
+    "Devuelve 12; hay que cambiar «mod 2 = 0» por «mod 2 &lt;&gt; 0»",
+    "Devuelve 4; hay que inicializar s ← A[1]",
+    "Devuelve 22; hay que cambiar «hasta n» por «hasta n−1»",
+    "Devuelve 6; hay que cambiar s ← A[i] por s ← s + A[i]"
+   ],
+   "respuesta": 3,
+   "explicacion": "<p>Como la línea dice s ← A[i] (asignación) en lugar de s ← s + A[i] (acumulación), cada par PISA el valor anterior en vez de sumarse. Trazando [4, 7, 2, 9, 6]: el 4 es par, s = 4; el 7 no; el 2 es par, s = 2; el 9 no; el 6 es par, s = 6. Devuelve 6, que es simplemente el ÚLTIMO par del arreglo. El resultado correcto es 4+2+6 = 12, y se obtiene acumulando.</p>",
+   "concepto": "Depuración; diferencia entre asignar y acumular",
+   "dificultad": "facil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-depuracion-el-arreglo-que-no-se-invierte",
+   "nivel": "gigabyte",
+   "titulo": "Depuración: el arreglo que no se invierte",
+   "enunciado": "<p>Este código intenta invertir un arreglo de n elementos (posiciones 1 a n), pero algo anda mal:</p><pre>A = [1, 2, 3, 4, 5]\nn &lt;- 5\npara i desde 1 hasta n hacer\n    t &lt;- A[i]\n    A[i] &lt;- A[n + 1 - i]\n    A[n + 1 - i] &lt;- t\nfin para\nmostrar A</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué muestra el programa y por qué?",
+   "opciones": [
+    "[5, 4, 3, 2, 1], el código es correcto",
+    "[5, 2, 3, 4, 1], solo intercambia los extremos",
+    "[1, 2, 3, 4, 5], porque cada par se intercambia dos veces",
+    "[1, 4, 3, 2, 5], porque el elemento del medio queda mal"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>El intercambio en sí está bien escrito, pero el bucle recorre TODO el arreglo en lugar de solo la primera mitad. Con i=1 se intercambian las posiciones 1 y 5 → [5,2,3,4,1]; con i=2 las posiciones 2 y 4 → [5,4,3,2,1]; con i=3 se intercambia la posición 3 consigo misma; con i=4 se vuelven a intercambiar 4 y 2, deshaciendo el trabajo → [5,2,3,4,1]; con i=5 se vuelven a intercambiar 5 y 1 → [1,2,3,4,5]. El arreglo queda igual que al principio. La corrección es que el bucle vaya desde 1 hasta n div 2.</p>",
+   "concepto": "Depuración; arreglos, intercambio y rango de un bucle",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-maximo-minimo-y-cuantos-cambios",
+   "nivel": "gigabyte",
+   "titulo": "Máximo, mínimo y cuántos cambios",
+   "enunciado": "<p>Este programa busca el mayor y el menor de un arreglo (posiciones 1 a 7):</p><pre>A = [7, 2, 9, 4, 9, 1, 6]\nmax &lt;- A[1]\nmin &lt;- A[1]\npara i desde 2 hasta 7 hacer\n    si A[i] &gt; max entonces\n        max &lt;- A[i]\n    fin si\n    si A[i] &lt; min entonces\n        min &lt;- A[i]\n    fin si\nfin para\nmostrar max - min</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuánto vale max − min y cuántas veces en total se ejecutan las líneas de asignación que están dentro de los «si»?",
+   "opciones": [
+    "8 y 3 asignaciones",
+    "8 y 4 asignaciones",
+    "9 y 3 asignaciones",
+    "8 y 2 asignaciones"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Arrancamos con max = min = 7. i=2 (A=2): 2&lt;7 → min = 2 (asignación 1). i=3 (A=9): 9&gt;7 → max = 9 (asignación 2). i=4 (A=4): ninguna. i=5 (A=9): la comparación es 9 &gt; 9, que es FALSA porque el operador es estrictamente mayor, así que NO hay asignación (acá está la trampa). i=6 (A=1): 1&lt;2 → min = 1 (asignación 3). i=7 (A=6): ninguna. Quedan max = 9 y min = 1, así que max − min = 8, con 3 asignaciones en total.</p>",
+   "concepto": "Máximo y mínimo; comparaciones estrictas; traza de bucle",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-el-dibujo-escalonado",
+   "nivel": "gigabyte",
+   "titulo": "El dibujo escalonado",
+   "enunciado": "<p>Este programa imprime cuatro líneas de texto. El símbolo <code>+</code> concatena (pega) textos.</p><pre>para i desde 1 hasta 4 hacer\n    linea &lt;- &quot;&quot;\n    para j desde 1 hasta i hacer\n        si (i + j) mod 2 = 0 entonces\n            linea &lt;- linea + &quot;#&quot;\n        sino\n            linea &lt;- linea + &quot;.&quot;\n        fin si\n    fin para\n    mostrar linea\nfin para</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué dibujo se obtiene?",
+   "opciones": [
+    "#  /  .#  /  #.#  /  .#.#",
+    "#  /  #.  /  #.#  /  #.#.",
+    ".  /  .#  /  .#.  /  .#.#",
+    "#  /  ##  /  ###  /  ####"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>La línea i tiene exactamente i caracteres, y en la posición j se pone «#» si i+j es par y «.» si es impar. i=1: 1+1=2 par → «#». i=2: 3 impar → «.», 4 par → «#» → «.#». i=3: 4 par → «#», 5 impar → «.», 6 par → «#» → «#.#». i=4: «.#.#». Las líneas impares empiezan con «#» y las pares con «.».</p>",
+   "concepto": "Bucles anidados, construcción de cadenas y paridad",
+   "dificultad": "media",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-potencia-rapida",
+   "nivel": "gigabyte",
+   "titulo": "Potencia rápida",
+   "enunciado": "<p>Esta función recursiva calcula potencias de manera astuta:</p><pre>funcion potencia(b, e)\n    si e = 0 entonces\n        devolver 1\n    fin si\n    si e mod 2 = 0 entonces\n        m &lt;- potencia(b, e div 2)\n        devolver m * m\n    sino\n        devolver b * potencia(b, e - 1)\n    fin si\nfin funcion\n\nmostrar potencia(2, 10)</pre>",
+   "imagenes": [],
+   "pregunta": "¿Qué valor se muestra y cuántas veces en total se entra a la función potencia (contando la primera llamada)?",
+   "opciones": [
+    "1024 y 6 llamadas",
+    "1024 y 10 llamadas",
+    "100 y 6 llamadas",
+    "1024 y 11 llamadas"
+   ],
+   "respuesta": 0,
+   "explicacion": "<p>Seguimos el exponente: potencia(2,10) → como 10 es par, llama a potencia(2,5) → como 5 es impar, llama a potencia(2,4) → potencia(2,2) → potencia(2,1) → potencia(2,0), que devuelve 1. Las llamadas son con exponentes 10, 5, 4, 2, 1 y 0: 6 en total. Los valores vuelven así: potencia(2,1)=2; potencia(2,2)=4; potencia(2,4)=16; potencia(2,5)=32; potencia(2,10)=32×32=1024. La versión ingenua necesitaría 11 llamadas: partir el exponente al medio ahorra trabajo.</p>",
+   "concepto": "Recursión y eficiencia; exponenciación rápida",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  },
+  {
+   "id": "gi-ordenamiento-por-insercion-contando-movi",
+   "nivel": "gigabyte",
+   "titulo": "Ordenamiento por inserción: contando movimientos",
+   "enunciado": "<p>Este es el ordenamiento por inserción sobre un arreglo de 5 elementos (posiciones 1 a 5):</p><pre>A = [4, 3, 5, 1, 2]\nmovimientos &lt;- 0\npara i desde 2 hasta 5 hacer\n    actual &lt;- A[i]\n    j &lt;- i - 1\n    mientras j &gt;= 1 y A[j] &gt; actual hacer\n        A[j+1] &lt;- A[j]\n        movimientos &lt;- movimientos + 1\n        j &lt;- j - 1\n    fin mientras\n    A[j+1] &lt;- actual\nfin para\nmostrar movimientos</pre>",
+   "imagenes": [],
+   "pregunta": "¿Cuántos movimientos (líneas A[j+1] ← A[j] ejecutadas) cuenta el programa?",
+   "opciones": [
+    "4",
+    "5",
+    "7",
+    "10"
+   ],
+   "respuesta": 2,
+   "explicacion": "<p>i=2, actual=3: el 4 es mayor, se corre 1 lugar (1 movimiento) → [3,4,5,1,2]. i=3, actual=5: el 4 no es mayor que 5 (0 movimientos). i=4, actual=1: se corren el 5, el 4 y el 3 (3 movimientos) → [1,3,4,5,2]. i=5, actual=2: se corren el 5, el 4 y el 3, pero el 1 no es mayor que 2 y el bucle se detiene (3 movimientos) → [1,2,3,4,5]. Total: 1+0+3+3 = 7 movimientos.</p>",
+   "concepto": "Ordenamiento por inserción; contadores en bucles anidados",
+   "dificultad": "dificil",
+   "fuente": "Variante original estilo Bebras (verificado por ejecución)",
+   "incompleto": false
+  }
+ ]
+}
