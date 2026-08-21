@@ -106,6 +106,14 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
   font-size:1.05rem;padding:9px 12px;border-radius:9px;border:1px solid var(--line-strong);
   background:var(--surface);color:var(--ink)}
 
+.check{display:flex;gap:11px;align-items:flex-start;cursor:pointer;margin-bottom:22px;
+  border:1px solid var(--line-strong);border-radius:11px;padding:13px 15px;background:var(--surface)}
+.check:hover{border-color:var(--brand)}
+.check input{flex:none;width:18px;height:18px;margin:2px 0 0;accent-color:var(--brand);cursor:pointer}
+.check .d{display:block;font-size:.85rem;color:var(--muted);line-height:1.45;margin-top:2px}
+.check:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+.check:has(input:focus-visible){outline:2px solid var(--brand);outline-offset:2px}
+
 /* ---------- progress ---------- */
 .progress{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
 .pip{
@@ -229,7 +237,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Grafos / circuito de costo mínimo",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 1",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-02",
@@ -251,7 +260,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Algoritmos voraces / optimización con restricción",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 2",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-03",
@@ -274,7 +284,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Lógica / satisfacción de restricciones",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 3",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-04",
@@ -298,7 +309,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Patrones y secuencias cíclicas",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 4",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-05",
@@ -320,7 +332,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Detección y corrección de errores / distancia de Hamming",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 5",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-06",
@@ -342,7 +355,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Estructuras de datos / pila (LIFO)",
    "dificultad": "facil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 6",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-07",
@@ -388,7 +402,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Sistemas de reescritura / gramáticas",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 8",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-09",
@@ -410,7 +425,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Lógica / restricciones y asignación",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 9",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-10",
@@ -434,7 +450,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Algoritmos / secuencias de instrucciones y navegación",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 10",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-mb-01",
@@ -456,7 +473,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Aritmética modular / ciclos",
    "dificultad": "facil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 1",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-02",
@@ -478,7 +496,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Criptografía / sustitución monoalfabética",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 2",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-03",
@@ -500,7 +519,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Relaciones y transitividad / grafos",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 3",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-04",
@@ -520,7 +540,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Lógica proposicional / verdaderos y mentirosos",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 4",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-05",
@@ -542,7 +563,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Búsqueda binaria",
    "dificultad": "facil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 5",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-06",
@@ -566,7 +588,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Estructuras de datos / quadtree y compresión de imágenes",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 6",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-07",
@@ -610,7 +633,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Optimización / asignación de costo mínimo",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 8",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-09",
@@ -632,7 +656,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Lógica / razonamiento deductivo con restricciones",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 9",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "ki-devolviendo-los-libros",
@@ -1152,7 +1177,8 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
    "concepto": "Máquinas de estado finito / autómatas",
    "dificultad": "media",
    "fuente": "Variante original estilo Bebras",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "me-los-frascos-desordenados",
@@ -1938,6 +1964,11 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
 
   var DIF = { facil: 'fácil', media: 'media', dificil: 'difícil' };
 
+  // Desafíos que ya se usaron en las pruebas impresas de 9 problemas.
+  // Se pueden excluir para no repetirlos en el laboratorio.
+  var EN_FICHA = {};
+  TODOS.forEach(function (p) { if (p.ficha) EN_FICHA[p.nivel] = (EN_FICHA[p.nivel] || 0) + 1; });
+
   var S = null;           // estado de la prueba en curso
   var tick = null;        // intervalo del cronómetro
   var app = document.getElementById('app');
@@ -1991,8 +2022,10 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
   }
 
   /* Selecciona n problemas balanceando dificultad y evitando repetir concepto. */
-  function elegirProblemas(nivel, n, codigo) {
-    var pool = TODOS.filter(function (p) { return p.nivel === nivel; });
+  function elegirProblemas(nivel, n, codigo, sinFicha) {
+    var pool = TODOS.filter(function (p) {
+      return p.nivel === nivel && !(sinFicha && p.ficha);
+    });
     var rnd = rngDesde(nivel + '|' + codigo);
     if (!n || n >= pool.length) return mezclar(pool, rnd);
 
@@ -2068,17 +2101,43 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
           'para que toda la clase rinda la misma prueba.</p>' +
         '</div>' +
 
+        (EN_FICHA.kilobyte || EN_FICHA.megabyte
+          ? '<label class="check" id="wrapFicha"><input type="checkbox" id="sinficha" checked>' +
+            '<span><strong>No repetir los desafíos de las pruebas impresas</strong>' +
+            '<span class="d" id="dFicha"></span></span></label>'
+          : '') +
+
         '<button class="btn primary" id="empezar" style="width:100%;padding:14px">Empezar</button>' +
       '</div>' +
 
-      '<p class="foot"><strong>Fichas imprimibles:</strong> ' +
+      '<p class="foot"><strong>Pruebas impresas de 9 desafíos</strong> (formato de la fase inicial): ' +
+      '<a href="pruebas/Prueba-Kilobyte-4to-a-6to.pdf">Kilobyte 4.º–6.º</a> · ' +
+      '<a href="pruebas/Prueba-Megabyte-7mo-a-9no.pdf">Megabyte 7.º–9.º</a> · ' +
+      '<a href="pruebas/Solucionario-docente.pdf">solucionario</a>.<br><br>' +
+      '<strong>Cuadernillos completos:</strong> ' +
       '<a href="fichas/Fichas-kilobyte.pdf">Kilobyte</a> · ' +
       '<a href="fichas/Fichas-megabyte.pdf">Megabyte</a> · ' +
-      '<a href="fichas/Fichas-gigabyte.pdf">Gigabyte</a> — cada cuadernillo trae todos los desafíos del ' +
-      'nivel, una hoja de respuestas para el alumno y las soluciones explicadas para el docente.<br><br>' +
+      '<a href="fichas/Fichas-gigabyte.pdf">Gigabyte</a> — todos los desafíos del nivel, ' +
+      'hoja de respuestas y soluciones explicadas.<br><br>' +
       'Banco de ' + TODOS.length + ' problemas. Los 18 desafíos cuya fuente dice «Aguarandú–Bebras 2025» ' +
       'son de las fichas oficiales de OMAPA; el resto son adaptaciones y variantes en estilo Bebras ' +
       'creadas para entrenar. Uso educativo sin fines de lucro.</p>';
+
+    function refrescarFicha() {
+      var d = el('dFicha');
+      if (!d) return;
+      var nv = document.querySelector('input[name=nivel]:checked').value;
+      var usados = EN_FICHA[nv] || 0;
+      var quedan = TODOS.filter(function (p) { return p.nivel === nv && !p.ficha; }).length;
+      d.textContent = usados
+        ? 'Deja afuera los ' + usados + ' desafíos de la prueba impresa de ' + NIVELES[nv].nombre +
+          '. Quedan ' + quedan + ' para sortear.'
+        : 'En ' + NIVELES[nv].nombre + ' no hay desafíos usados en papel.';
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('input[name=nivel]'), function (r) {
+      r.addEventListener('change', refrescarFicha);
+    });
+    refrescarFicha();
 
     el('otro').onclick = function () { el('codigo').value = codigoAlAzar(); };
     el('codigo').oninput = function () {
@@ -2088,15 +2147,16 @@ img{max-width:100%;height:auto;display:block;border-radius:8px;background:#fff}
       var nivel = document.querySelector('input[name=nivel]:checked').value;
       var modo = document.querySelector('input[name=modo]:checked').value;
       var codigo = el('codigo').value.trim() || 'BEBRAS';
-      iniciar(nivel, modo, codigo);
+      var sinFicha = !!(el('sinficha') && el('sinficha').checked);
+      iniciar(nivel, modo, codigo, sinFicha);
     };
   }
 
   /* ---------- prueba ---------- */
 
-  function iniciar(nivel, modo, codigo) {
+  function iniciar(nivel, modo, codigo, sinFicha) {
     var cfg = MODOS[modo];
-    var probs = elegirProblemas(nivel, cfg.n, codigo);
+    var probs = elegirProblemas(nivel, cfg.n, codigo, sinFicha);
     S = {
       nivel: nivel, modo: modo, codigo: codigo,
       probs: probs,

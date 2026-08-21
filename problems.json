@@ -25,7 +25,8 @@
    "concepto": "Grafos / circuito de costo mínimo",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 1",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-02",
@@ -47,7 +48,8 @@
    "concepto": "Algoritmos voraces / optimización con restricción",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 2",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-03",
@@ -70,7 +72,8 @@
    "concepto": "Lógica / satisfacción de restricciones",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 3",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-04",
@@ -94,7 +97,8 @@
    "concepto": "Patrones y secuencias cíclicas",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 4",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-05",
@@ -116,7 +120,8 @@
    "concepto": "Detección y corrección de errores / distancia de Hamming",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 5",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-06",
@@ -138,7 +143,8 @@
    "concepto": "Estructuras de datos / pila (LIFO)",
    "dificultad": "facil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 6",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-07",
@@ -184,7 +190,8 @@
    "concepto": "Sistemas de reescritura / gramáticas",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 8",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-09",
@@ -206,7 +213,8 @@
    "concepto": "Lógica / restricciones y asignación",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 9",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-kb-10",
@@ -230,7 +238,8 @@
    "concepto": "Algoritmos / secuencias de instrucciones y navegación",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Kilobyte, Problema 10",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "kilobyte"
   },
   {
    "id": "omapa-mb-01",
@@ -252,7 +261,8 @@
    "concepto": "Aritmética modular / ciclos",
    "dificultad": "facil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 1",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-02",
@@ -274,7 +284,8 @@
    "concepto": "Criptografía / sustitución monoalfabética",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 2",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-03",
@@ -296,7 +307,8 @@
    "concepto": "Relaciones y transitividad / grafos",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 3",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-04",
@@ -316,7 +328,8 @@
    "concepto": "Lógica proposicional / verdaderos y mentirosos",
    "dificultad": "media",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 4",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-05",
@@ -338,7 +351,8 @@
    "concepto": "Búsqueda binaria",
    "dificultad": "facil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 5",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-06",
@@ -362,7 +376,8 @@
    "concepto": "Estructuras de datos / quadtree y compresión de imágenes",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 6",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-07",
@@ -406,7 +421,8 @@
    "concepto": "Optimización / asignación de costo mínimo",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 8",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "omapa-mb-09",
@@ -428,7 +444,8 @@
    "concepto": "Lógica / razonamiento deductivo con restricciones",
    "dificultad": "dificil",
    "fuente": "OMAPA – Aguarandú–Bebras 2025, ficha Megabyte, Problema 9",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "ki-devolviendo-los-libros",
@@ -948,7 +965,8 @@
    "concepto": "Máquinas de estado finito / autómatas",
    "dificultad": "media",
    "fuente": "Variante original estilo Bebras",
-   "incompleto": false
+   "incompleto": false,
+   "ficha": "megabyte"
   },
   {
    "id": "me-los-frascos-desordenados",
